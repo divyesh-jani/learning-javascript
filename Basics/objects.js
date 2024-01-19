@@ -30,3 +30,41 @@ function getPortfolioValue(portfolio) {
 }
 
 portfolios.forEach(a => getPortfolioValue(a)); // $2020 and $1460
+
+// Property manipulation - add all properties of b to a
+let firstObj = { a: 1, d: 4 };
+let secondObj = { a: 5, b: 6, c: 7 };
+
+function addProperties(objOne, objTwo) {
+    for (prop in objTwo) {
+        objOne[prop] = objTwo[prop];
+    }
+    console.log(objOne);
+}
+addProperties(firstObj, secondObj); // { a: 5, d: 4, b: 6, c: 7 }
+
+// Property manipulation - add all properties of b to a that do not exist in a. Do no override any properties in a.
+let first = { a: 1, d: 4 };
+let second = { a: 5, b: 6, c: 7 };
+function addMissingProperties(objOne, objTwo) {
+    for (prop in objTwo) {
+        if (!objOne.hasOwnProperty(prop)) {
+            objOne[prop] = objTwo[prop]
+        }
+    }
+    console.log(objOne);
+}
+addMissingProperties(first, second); // { a: 1, d: 4, b: 6, c: 7 }
+
+// Property manipulation - remove properties from a that do not exist in b
+let firstObject = { a: 1, d: 4 };
+let secondObject = { a: 5, b: 6, c: 7 };
+function keepSharedProperty(objOne, objTwo) {
+    for (prop in objOne) {
+        if (!objTwo.hasOwnProperty(prop)) {
+            delete objOne[prop];
+        }
+    }
+    console.log(objOne);
+}
+keepSharedProperty(firstObject, secondObject); // { a: 1 }
