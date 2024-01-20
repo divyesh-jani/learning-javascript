@@ -29,3 +29,77 @@ for (let i = 0; i < keys.length; i = i + 1) {
     keyValues.push(objectLikeArray[keys[i]]);
 }
 console.log(keyValues); // [ 10, 20, 50 ]
+// or
+let keyValuesForEach = [];
+keys.forEach(key => keyValuesForEach.push(objectLikeArray[key]));
+console.log(keyValuesForEach); // [ 10, 20, 50 ]
+
+// Using continue to eliminate some array entries
+for (let i = 1; i < 10; i = i + 1) {
+    if (i % 2 !== 0) {
+        continue;
+    }
+    console.log(i);
+}
+
+// Array Methods
+// Join
+let testArray = [1,2,3,4,5,6,7,8,9];
+console.log(testArray.join());          // 1,2,3,4,5,6,7,8,9
+console.log(testArray.join(''));        // 123456789
+console.log(testArray.join('-'));       // 1-2-3-4-5-6-7-8-9
+let testArrayEmpty = new Array(5);
+console.log(testArrayEmpty.join('-'));  // ----
+console.log(testArray);                 // Original not changed - [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+// Reverse
+let testReverse = [1,3,5,6,8];
+console.log(testReverse.reverse());     // [ 8, 6, 5, 3, 1 ]
+console.log(testReverse);               // Original CHANGED - [ 8, 6, 5, 3, 1 ]
+
+// Sort
+let testSort = [3,1,8,6];
+console.log(testSort.sort());           // [ 1, 3, 6, 8 ]
+console.log(testSort);                  // Original CHANGED - [ 1, 3, 6, 8 ]
+
+// Concat
+let testConcat = [1,3,5,6,8];
+let testNext = [10,12];
+console.log(testConcat.concat('+'));        // [ 1, 3, 5, 6, 8, '+' ]
+console.log(testConcat.concat(testNext));   // [ 1, 3, 5, 6, 8, 10, 12 ]
+console.log(testConcat);                    // Originals not changed - [ 1, 3, 5, 6, 8 ]
+console.log(testNext);                      // Originals not changed - [ 10, 12 ]
+
+// Slice and Splice
+// Slice returns a part of array and does not change the array
+let testSlice = [1,3,5,6,8,10,12];
+console.log(testSlice.slice());       // [ 1, 3, 5, 6, 8, 10, 12 ] - removed nothing and returned original array
+console.log(testSlice.slice(2));      // [ 5, 6, 8, 10, 12 ] - removed first 2 elements and returned remaining
+console.log(testSlice.slice(-2));     // [ 10, 12 ] - returned last 2
+console.log(testSlice.slice(2, 3));   // [ 5 ] - returned index 2 and stops at 3 (does not include 3)
+console.log(testSlice.slice(2, -2));  // [ 5, 6, 8 ] - returned from index 2 and did not include last 2
+console.log(testSlice);               // [ 1, 3, 5, 6, 8, 10, 12 ]
+// Splice alters the original array
+let testSplice = [1,3,5,6,8,10,12];
+console.log(testSplice.splice());       // [] - nothing returned
+console.log(testSplice.splice(3));      // [ 6, 8, 10, 12 ] - same as slice, returned all but first 3 elements
+console.log(testSplice.splice(-2));     // [ 10, 12 ] - returned last 2
+console.log(testSplice.splice(2, 3));   // [ 5, 6, 8 ] - returns 3 elements from index 2, including 2
+console.log(testSplice.splice(-2, 2));  // [ 10, 12 ] - returned last 2
+
+// Push and Pop
+let testPushPop = [1,3,5,6,8];
+console.log(testPushPop.pop());         // 8 - returned last element
+console.log(testPushPop);               // [ 1, 3, 5, 6 ] - changed original array
+console.log(testPushPop.push(10));      // 5 - pushes element but returns array length
+console.log(testPushPop);               // [ 1, 3, 5, 6, 10 ]
+
+// Shift and Unshift
+// Unshift is push at the beginning; shift is pop from the beginning
+let testShiftUnshift = [5];
+console.log(testShiftUnshift.unshift(3));   // 2 - unshift = pushes element but returns array length
+console.log(testShiftUnshift.unshift(1));   // 3 - unshift = pushes element but returns array length
+console.log(testShiftUnshift);              // [ 1, 3, 5 ]
+console.log(testShiftUnshift.shift());      // 1 - shift = pop;  returns removed element
+console.log(testShiftUnshift.shift());      // 3 - shift = pop;  returns removed element
+console.log(testShiftUnshift);              // [5]
