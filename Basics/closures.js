@@ -33,3 +33,11 @@ console.log(c.count());             // 1
 console.log(d.count());             // 2
 console.log(c.count());             // 2
 console.log(d.count());             // 3
+
+// Sample closure function
+function multiplier(a) {
+    return (x) => x * a;
+};
+let double = multiplier(2);
+console.log(double);                // returns anonymous function
+console.log(double(10));            // 20

@@ -40,3 +40,31 @@ function useForInObject(input) {
 }
 
 useForInObject({a: 1, b: 2, c: 3});
+
+// Create chessboard
+function createChessboard(sides) {
+    let alternateChar = '#';
+    let chessBoard = '';
+    for (let i = 0; i < sides; i = i + 1) {
+        if (i % 2 === 0) {
+            for (let j = 0; j < sides; j = j + 1) {
+                if (j % 2 === 0) {
+                    chessBoard = chessBoard + alternateChar;
+                } else {
+                    chessBoard = chessBoard + ' ';
+                }
+            }
+        } else {
+            for (let j = 0; j < sides; j = j + 1) {
+                if (j % 2 === 0) {
+                    chessBoard = chessBoard + ' ';
+                } else {
+                    chessBoard = chessBoard + alternateChar;
+                }
+            }
+        }
+        chessBoard = chessBoard + '\n';
+    }
+    return chessBoard;
+};
+console.log(createChessboard(8));

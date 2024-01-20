@@ -6,6 +6,7 @@ var unhoisted = function(){
     return "Unhoisted function."
 }
 
+// Function decleration
 function hoisted() {
     return "Hoisted function."
 }
