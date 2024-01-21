@@ -37,10 +37,10 @@ const roads = [
 function buildGraph(roads) {
     let graph = {};
     function addEdge(from, to) {
-        if (graph[from] == null) {
-            graph[from] = [to];
-        } else {
+        if (graph[from]) {
             graph[from].push(to);
+        } else {
+            graph[from] = [to];
         }
     }
     for (let [from, to] of roads.map(road => road.split('-'))) {
