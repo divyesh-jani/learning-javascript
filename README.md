@@ -17,6 +17,7 @@
     - [Factorial](./Recursion/factorial.js)
     - [Exponents](./Recursion/exponents.js)
 3. Searching
+    - [Binary Search](./Searching/binary_search.js)
 4. Sorting
     - [Array Sort Method](./Sorting/sort_method.js)
     - [Selection Sort](./Sorting/selection_sort.js)
@@ -26,3 +27,6 @@
     - [Quick Sort](./Sorting/quick_sort.js)
 5. Trees and Graphs
     - [Mail Delivery Path](./Trees%20and%20Graphs/robot_path.js)
+6. Exercises
+    - [Is Palindrome](./Exercises/check_palindrome.js)
+    - [Is String Subset](./Exercises/check_subset.js)
