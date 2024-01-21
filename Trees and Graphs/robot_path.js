@@ -13,10 +13,9 @@ Gavin * *  Sam * * * * * Tom * * * * Bob
  *                         *
  *                         *
  *                         *
-Ernie * * * * * Dan * * * *
+Ernie * * * * * Dan * * *  *
 
-
--*/
+*/
 
 const roads = [
     'Alice-Bob',
