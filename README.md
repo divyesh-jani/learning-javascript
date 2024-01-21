@@ -19,5 +19,10 @@
 3. Searching
 4. Sorting
     - [Array Sort Method](./Sorting/sort_method.js)
+    - [Selection Sort](./Sorting/selection_sort.js)
+    - [Insertion Sort](./Sorting/insertion_sort.js)
+    - [Bubble Sort](./Sorting/bubble_sort.js)
+    - [Merge Sort](./Sorting/merge_sort.js)
+    - [Quick Sort](./Sorting/quick_sort.js)
 5. Trees and Graphs
     - [Mail Delivery Path](./Trees%20and%20Graphs/robot_path.js)
