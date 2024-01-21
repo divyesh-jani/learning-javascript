@@ -43,3 +43,16 @@ chechArgsLength(null, 5, 'a');             // Args match!
 chechArgsLength(5, 10, 15, 20);            // Args do not match!
 chechArgsLength();                         // Args do not match!
 chechArgsLength({}, [], undefined);        // Args match!
+
+// Function can take any number of arguments
+function addEverything() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i = i + 1) {
+        sum = sum + arguments[i];
+    }
+    return sum;
+};
+
+console.log(addEverything(5,10,50));        // 65
+console.log(addEverything(2));              // 2
+console.log(addEverything(5,6.3,-2));       // 9.3

@@ -15,6 +15,7 @@
     - [Closures](./Basics/closures.js)
 2. Recursion
     - [Factorial](./Recursion/factorial.js)
+    - [Exponents](./Recursion/exponents.js)
 3. Searching
 4. Sorting
 5. Trees and Graphs

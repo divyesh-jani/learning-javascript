@@ -7,7 +7,7 @@
 // same as above using arrow function
 ['a', true, 10, 50].forEach((a, b, c) => console.log('Element is ' + a + ' at index ' + b + ' in array ' + c));
 
-// map(function(element, index, entireArray)); returns array some same number of elements
+// map(function(element, index, entireArray)); returns array with same number of elements
 let squareArray = ['a', false, 10, 50].map(function(a, b, c){
     return (a * a);
 });

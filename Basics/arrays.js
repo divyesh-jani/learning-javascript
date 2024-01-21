@@ -1,11 +1,21 @@
 // Iterate
+
+// for-in can be used for arrays and objects
+// for-of can be used only for arrays
+// for-of = array; for-in = object
 function useForInArray(input) {
     for (i in input) {
         console.log("Index is " + i + ", Value is " + input[i]);
     }
 }
+useForInArray([10,20,30,40,50]);
 
-useForInArray([1,2,3,4,5]);
+function useForOfArray(input) {
+    for (i of input) {
+        console.log("Value is " + i);
+    }
+}
+useForOfArray([10,20,30,40,50]);
 
 
 // Arrays can be used as object (keys can be aplhanumeric)

@@ -1,12 +1,17 @@
 // Iterate
+
+// for-in to loop over objects
+// for-in = object; for-of = array
 function useForInObject(input) {
     for (i in input) {
         console.log("Key is " + i + ", Value is " + input[i])
     }
 }
+useForInObject({a: 10, b: 20, c: 30});
 
-useForInObject({a: 1, b: 2, c: 3});
+console.log(Object.keys({a: 10, b: 20, c: 30}));       // [ 'a', 'b', 'c' ]
 
+// Accessing values
 let a = { x: 5 };
 console.log(a.x);       // 5
 console.log(a['x']);    // 5
