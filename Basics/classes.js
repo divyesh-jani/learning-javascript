@@ -79,6 +79,10 @@ class BankAccount {
     static getAccountCopyright() {
         return 'All rights reserved!';
     }
+
+    createBabyAccount(babyName, amount) {
+        return new BankAccount(this.customerName + '-' + babyName, amount);
+    }
 };
 
 let myAccount = new BankAccount('Jani', 1000);          // Account created for Jani and deposited $1000
@@ -100,4 +104,6 @@ myAccount.accountStatus = true;                         // true
 console.log(BankAccount.bankName);                      // Amex
 BankAccount.bankName = 'BofA';                          // BofA
 console.log(BankAccount.getAccountCopyright());         // All rights reserved!
+let childAccount = myAccount.createBabyAccount('Child', 500);   // Account created for Jani-Child and deposited $500
+childAccount.withdrawMoney(100);                        // Withdrew $100, updated balance is $400
 myAccount.depositMoney(200);                            // Added $200, updated balance is $200
