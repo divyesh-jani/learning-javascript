@@ -30,3 +30,4 @@
 6. Exercises
     - [Is Palindrome](./Exercises/check_palindrome.js)
     - [Is String Subset](./Exercises/check_subset.js)
+    - [Classic Two Sum](./Exercises/two_sum.js)
