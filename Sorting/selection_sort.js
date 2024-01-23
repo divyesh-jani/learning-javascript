@@ -24,6 +24,8 @@ function swapValueByIndex(array, sourceIndex, destIndex) {
     let destinationValue = array[destIndex];
     array[destIndex] = array[sourceIndex];
     array[sourceIndex] = destinationValue;
+    // or swap values the fancy way
+    // [array[sourceIndex], array[destIndex]] = [array[destIndex], array[sourceIndex]];
 };
 
 let arrayToSort = [ 23, 5, 15, 42, 68, 50, 0, 50, 95, 64];
