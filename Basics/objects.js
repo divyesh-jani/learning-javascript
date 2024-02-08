@@ -9,7 +9,9 @@ function useForInObject(input) {
 }
 useForInObject({a: 10, b: 20, c: 30});
 
-console.log(Object.keys({a: 10, b: 20, c: 30}));       // [ 'a', 'b', 'c' ]
+console.log(Object.keys({a: 10, b: 20, c: 30}));        // [ 'a', 'b', 'c' ]
+console.log(Object.values({a: 10, b: 20, c: 30}));      // [ 10, 20, 30 ]
+console.log(Object.entries({a: 10, b: 20, c: 30}));     // [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ] ]
 
 // Accessing values
 let a = { x: 5 };
