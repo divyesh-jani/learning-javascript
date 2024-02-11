@@ -28,7 +28,7 @@
     - [Selection Sort](./Sorting/selection_sort.js)
     - Insertion Sort
     - [Bubble Sort](./Sorting/bubble_sort.js)
-    - Merge Sort
+    - [Merge Sort](./Sorting/merge_sort.js)
     - Quick Sort
 5. Stacks and Queues
     - [Stacks](./Stacks%20and%20Queues/stacks.js)
@@ -63,4 +63,5 @@
     - [Longest Common Substring](./Exercises/longest_common_substring.js)
     - [Contiguous Subarrays](./Exercises/contiguous_subarrays.js)
     - [Rotational Cipher](./Exercises/rotational_cipher.js)
-    - [pair Sums](./Exercises/pair_sums.js)
+    - [Pair Sums](./Exercises/pair_sums.js)
+    - [Revenue Milestones](./Exercises/revenue_milestones.js)

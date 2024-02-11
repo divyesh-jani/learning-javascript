@@ -8,12 +8,14 @@ function bubbleSort(arrayToSort) {
     let sorted = false;
     while (!sorted) {
         sorted = true;
-        for (let i = 0; i < arrayToSort.length - 1; i = i + 1) {
+        let arrayLength = arrayToSort.length - 1;
+        for (let i = 0; i < arrayLength; i = i + 1) {
             if (arrayToSort[i + 1] < arrayToSort[i]) {
                 swapValueByIndex(arrayToSort, i + 1, i);
                 sorted = false;
             }
         }
+        arrayLength = arrayLength - 1; // because last element is sorted after each iteration, so no need to go over it again
     }
     return arrayToSort;
 }
@@ -43,7 +45,7 @@ console.log(bubbleSort(arrayToSort));       // [ 0, 5, 15, 23, 42, 50, 50, 64, 6
 // Alternate approach
 function bubbleSortAgain(arrayToSort) {
     for (let i = 0; i < arrayToSort.length - 1; i = i + 1) {    // can be arrayToSort.length but last element won't do anything because of next loop
-        for (let j = 0; j < arrayToSort.length - 1 - i; j  = j + 1) { // -i only so we do not go over already sorted last numbers, fewer iterations
+        for (let j = 0; j < arrayToSort.length - 1 - i; j = j + 1) { // -i only so we do not go over already sorted last numbers, fewer iterations
             if (arrayToSort[j + 1] < arrayToSort[j]) {
                 swapValueByIndex(arrayToSort, j + 1, j);
             }

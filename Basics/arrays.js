@@ -82,6 +82,8 @@ console.log(testNext);                      // Originals not changed - [ 10, 12 
 
 // Slice and Splice
 // Slice returns a part of array and does not change the array
+// someArray.slice(startIndex, endIndex) // include start index in result but not end index
+// someArray.slice(startIndex) // all elements to the right of array including element at startIndex
 let testSlice = [1,3,5,6,8,10,12];
 console.log(testSlice.slice());       // [ 1, 3, 5, 6, 8, 10, 12 ] - removed nothing and returned original array
 console.log(testSlice.slice(2));      // [ 5, 6, 8, 10, 12 ] - removed first 2 elements and returned remaining
