@@ -62,3 +62,5 @@
     - [Tower of Hanoi](./Exercises/tower_of_hanoi.js)
     - [Longest Common Substring](./Exercises/longest_common_substring.js)
     - [Contiguous Subarrays](./Exercises/contiguous_subarrays.js)
+    - [Rotational Cipher](./Exercises/rotational_cipher.js)
+    - [pair Sums](./Exercises/pair_sums.js)

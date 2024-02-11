@@ -27,7 +27,7 @@ function countSubarrays(arr) {
                 numberOfSubArrays = numberOfSubArrays + 1;
                 j = j + 1;
             } else {
-            break;
+                break;
             }
         }
         j = i - 1;
@@ -36,7 +36,7 @@ function countSubarrays(arr) {
                 numberOfSubArrays = numberOfSubArrays + 1;
                 j = j - 1;
             } else {
-            break;
+                break;
             }
         }
         finalArray.push(numberOfSubArrays);
