@@ -61,3 +61,4 @@
     - [Robot Path](./Exercises/robot_path.js)
     - [Tower of Hanoi](./Exercises/tower_of_hanoi.js)
     - [Longest Common Substring](./Exercises/longest_common_substring.js)
+    - [Contiguous Subarrays](./Exercises/contiguous_subarrays.js)
