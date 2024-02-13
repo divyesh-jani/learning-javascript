@@ -51,6 +51,8 @@
     - [Is Anagram](./Exercises/is_anagram.js)
     - [Factorial](./Exercises/factorial.js)
     - [Fibonacci](./Exercises/fibonacci.js)
+    - [Valid Paranthesis](./Exercises/valid_paranthesis.js)
+    - [Generate Paranthesis](./Exercises/generate_paranthesis.js)
     - [Is String Subset](./Exercises/check_subset.js)
     - [Climbing Staircase](./Exercises/climbing_staircase.js)
     - [Merge Intervals](./Exercises/merge_intervals.js)
@@ -70,3 +72,4 @@
     - [Rotary Locks](./Exercises/rotary_lock.js)
     - [First and Last Position](./Exercises/first_and_last_position.js)
     - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
+    - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
