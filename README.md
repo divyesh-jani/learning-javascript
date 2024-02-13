@@ -68,3 +68,5 @@
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
     - [Cafeteria Seats](./Exercises/cafeteria_seats.js)
     - [Rotary Locks](./Exercises/rotary_lock.js)
+    - [First and Last Position](./Exercises/first_and_last_position.js)
+    - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
