@@ -31,8 +31,11 @@ function getMaxAdditionalDinersCount(N, K, M, S) {
         totalNewSeatingAvailable = totalNewSeatingAvailable + Math.floor(remainingPlaces / maintainSpace);
         initialPosition = dinerSeat + maintainSpace;
     }
-    remainingPlaces = N - initialPosition + 1;
-    totalNewSeatingAvailable = totalNewSeatingAvailable + Math.ceil(remainingPlaces / maintainSpace);
+    // remainingPlaces = N - initialPosition + 1;
+    // totalNewSeatingAvailable = totalNewSeatingAvailable + Math.ceil(remainingPlaces / maintainSpace);
+    // or
+    remainingPlaces = N - S[M - 1];
+    totalNewSeatingAvailable = totalNewSeatingAvailable + Math.floor(remainingPlaces / maintainSpace);
 
     return totalNewSeatingAvailable;
 }
@@ -42,4 +45,3 @@ console.log(getMaxAdditionalDinersCount(10, 1, 2, [2, 6]));
 
 console.log(getMaxAdditionalDinersCount(15, 2, 3, [11, 6, 14]));
 // 1
-

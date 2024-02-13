@@ -65,3 +65,5 @@
     - [Rotational Cipher](./Exercises/rotational_cipher.js)
     - [Pair Sums](./Exercises/pair_sums.js)
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
+    - [Cafeteria Seats](./Exercises/cafeteria_seats.js)
+    - [Rotary Locks](./Exercises/rotary_lock.js)
