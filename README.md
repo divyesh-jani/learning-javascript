@@ -48,6 +48,7 @@
     - [Is Palindrome](./Exercises/check_palindrome.js)
     - [Is Prime](./Exercises/check_prime.js)
     - [Is Power of Two](./Exercises/power_of_two.js)
+    - [Is Anagram](./Exercises/is_anagram.js)
     - [Factorial](./Exercises/factorial.js)
     - [Fibonacci](./Exercises/fibonacci.js)
     - [Is String Subset](./Exercises/check_subset.js)
