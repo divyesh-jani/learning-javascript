@@ -2,6 +2,7 @@
 ### Topics
 1. Basics
     - [Variables](./Basics/variables.js)
+    - [Type Coersion and Conversion](./Basics/type_coersion_coversion.js)
     - [Loops](./Basics/loops.js)
     - [Conditional Statements](./Basics/conditions.js)
     - [Functions](./Basics/functions.js)
