@@ -15,6 +15,7 @@
     - Modules
     - [Classes](./Basics/classes.js)
     - [Closures](./Basics/closures.js)
+    - [Currying](./Basics/currying.js)
     - Inheritance
 2. Recursion
     - [Factorial](./Recursion/factorial.js)

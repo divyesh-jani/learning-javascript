@@ -1,3 +1,6 @@
+// Inner functions have access to variables of outer function (scope)
+// even after outer function or scope has completed execution. That's what a closure is.
+
 // Accesses local variable
 let scope = "global scope";
 function checkScope() {
@@ -41,3 +44,20 @@ function multiplier(a) {
 let double = multiplier(2);
 console.log(double);                // returns anonymous function
 console.log(double(10));            // 20
+
+
+// Another example 
+let x = 5;
+function outer(y) {
+    return function(z) {
+        return x + y + z;
+    }
+}
+let first = outer(20);
+console.log(first);         // returns anonymous function
+
+let second = first(50);
+console.log(second);        // 75
+console.log(outer(20)(50)); // 75   // same as above
+
+let third = second(100);    // Error - second is not a function
