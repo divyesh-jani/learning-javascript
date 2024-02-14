@@ -8,15 +8,18 @@
     - [Functions](./Basics/functions.js)
     - [Arrays](./Basics/arrays.js)
     - [Objects](./Basics/objects.js)
+    - [This Keyword](./Basics/this.js)
     - [Sets](./Basics/sets.js)
     - [Maps](./Basics/maps.js)
     - [Operations](./Basics/operations.js)
     - [Error Handling](./Basics/error.js)
-    - Modules
-    - [Classes](./Basics/classes.js)
     - [Closures](./Basics/closures.js)
     - [Currying](./Basics/currying.js)
-    - Inheritance
+    - [Prototype](./Basics/prototype.js)
+    - [Prototypal Inheritance](./Basics/prototypal_inheritance.js)
+    - [Classes](./Basics/classes.js)
+    - [Class Inheritance](./Basics/class_inheritance.js)
+    - Modules
 2. Recursion
     - [Factorial](./Recursion/factorial.js)
     - [Exponents](./Recursion/exponents.js)
