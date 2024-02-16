@@ -82,4 +82,5 @@
     - [Circular Gas Station](./Exercises/circular_gas_station.js)
     - [Course Prerequisites](./Exercises/can_finish_courses.js)
     - [Kth Permutation](./Exercises/kth_permutation.js)
+    - [Shortest Substring](./Exercises/shortest_substring.js)
     
