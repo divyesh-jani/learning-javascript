@@ -78,3 +78,8 @@
     - [First and Last Position](./Exercises/first_and_last_position.js)
     - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
     - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
+    - [Check Binary Tree Symmetry](./Exercises/check_binary_tree_symmetry.js)
+    - [Circular Gas Station](./Exercises/circular_gas_station.js)
+    - [Course Prerequisites](./Exercises/can_finish_courses.js)
+    - [Kth Permutation](./Exercises/kth_permutation.js)
+    
