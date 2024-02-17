@@ -31,7 +31,7 @@
 4. Sorting
     - [Array Sort Method](./Sorting/sort_method.js)
     - [Selection Sort](./Sorting/selection_sort.js)
-    - Insertion Sort
+    - [Insertion Sort](./Sorting/insertion_sort.js)
     - [Bubble Sort](./Sorting/bubble_sort.js)
     - [Merge Sort](./Sorting/merge_sort.js)
     - Quick Sort
@@ -84,4 +84,5 @@
     - [Course Prerequisites](./Exercises/can_finish_courses.js)
     - [Kth Permutation](./Exercises/kth_permutation.js)
     - [Shortest Substring](./Exercises/shortest_substring.js)
+    - [Contiguous Subarray Averages](./Exercises/contiguous_subarray_averages.js)
     

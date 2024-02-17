@@ -5,6 +5,15 @@
  */
 
 function insertionSort(arrayToSort) {
+    for (let i = 1; i < arrayToSort.length; i = i + 1) {
+        let currentNumber = arrayToSort[i];
+        let j = i - 1;
+        while (j >= 0 && arrayToSort[j] > currentNumber) {
+            arrayToSort[j + 1] = arrayToSort[j];
+            j = j - 1;
+        }
+        arrayToSort[j + 1] = currentNumber;
+    }
     return arrayToSort;
 };
 
