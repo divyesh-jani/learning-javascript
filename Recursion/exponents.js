@@ -23,9 +23,8 @@ console.log(powerWithoutRecursion(4,6));        // 4096
 function powerWithRecursion(base, exponent) {
     if (exponent === 0) {
         return 1;
-    } else {
-        return base * (powerWithRecursion(base, exponent - 1));
     }
+    return base * (powerWithRecursion(base, exponent - 1));
 };
 
 console.log(powerWithRecursion(0,0));           // 1

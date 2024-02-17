@@ -34,7 +34,7 @@
     - [Insertion Sort](./Sorting/insertion_sort.js)
     - [Bubble Sort](./Sorting/bubble_sort.js)
     - [Merge Sort](./Sorting/merge_sort.js)
-    - Quick Sort
+    - [Quick Sort](./Sorting/quick_sort.js)
 5. Stacks and Queues
     - [Stacks](./Stacks%20and%20Queues/stacks.js)
     - [Queues Using Array](./Stacks%20and%20Queues/queues_using_array.js)

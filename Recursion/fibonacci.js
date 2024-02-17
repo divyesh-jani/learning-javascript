@@ -7,7 +7,7 @@ function getFibonacciNumber(n) {
     return getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
 }
 
-// Time complexity is 2 to the power n (much worse than iteratibe method)
+// Time complexity is 2 to the power n (much worse than iterative method)
 
 console.log(getFibonacciNumber(1));     // 0
 console.log(getFibonacciNumber(2));     // 1

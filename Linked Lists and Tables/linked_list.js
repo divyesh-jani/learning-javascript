@@ -148,7 +148,7 @@ myLinkedList.insert('Gus', 0);
 myLinkedList.printList();                       // Gus -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> null
 myLinkedList.insert('Hank', 7);
 myLinkedList.printList();                       // Gus -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> Hank -> null
-console.log(myLinkedList.insert('Ivan', 9));   // Cannot insert element outside of list range
+console.log(myLinkedList.insert('Ivan', 9));    // Cannot insert element outside of list range
 myLinkedList.insert('John', 1);
 myLinkedList.printList();                       // Gus -> John -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> Hank -> null
 console.log(myLinkedList.getSize());            // 9
