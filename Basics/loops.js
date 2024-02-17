@@ -33,6 +33,14 @@ function useForInArray(input) {
 
 useForInArray([1,2,3,4,5]);
 
+function useForOfArray(input) {
+    for (i of input) {
+        console.log("Value is " + i);
+    }
+}
+
+useForOfArray([1,2,3,4,5]);
+
 function useForInObject(input) {
     for (i in input) {
         console.log("Key is " + i + ", Value is " + input[i])

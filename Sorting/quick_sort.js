@@ -12,7 +12,7 @@ function quickSort(arrayToSort) {
     for (let i = 0; i < arrayToSort.length - 1; i = i + 1) {
         arrayToSort[i] < pivotElement ? leftArr.push(arrayToSort[i]) : rightArr.push(arrayToSort[i]);
     }
-    // return [].concat(quickSort(leftArr), pivotElement, quickSort(rightArr));
+    // return quickSort(leftArr).concat(pivotElement, quickSort(rightArr));
     // or use spread operator to concat
     return [...quickSort(leftArr), pivotElement, ...quickSort(rightArr)];
 };

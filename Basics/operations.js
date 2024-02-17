@@ -28,9 +28,11 @@ console.log(extractedStringOrLast);     // [ 'a', 50 ]
 
 // every() and some(); returns a boolean
 // every and some stops running when the result is known, won't unnecessarily run for all elements
+// every(function(element, index, entireArray))
 let isEveryEntryNumber = [10, false, 30, 100].every(a => typeof(a) === 'number');
 console.log(isEveryEntryNumber);        // false
 
+// some(function(element, index, entireArray))
 let isAnyEntryNumber = [10, false, 30, 100].some(a => typeof(a) === 'number');
 console.log(isAnyEntryNumber);          // true
 

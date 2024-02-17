@@ -80,7 +80,6 @@ console.log(testConcat.concat(testNext));   // [ 1, 3, 5, 6, 8, 10, 12 ]
 console.log(testConcat);                    // Originals not changed - [ 1, 3, 5, 6, 8 ]
 console.log(testNext);                      // Originals not changed - [ 10, 12 ]
 
-// Slice and Splice
 // Slice returns a part of array and does not change the array
 // someArray.slice(startIndex, endIndex) // include start index in result but not end index
 // someArray.slice(startIndex) // all elements to the right of array including element at startIndex
@@ -91,7 +90,10 @@ console.log(testSlice.slice(-2));     // [ 10, 12 ] - returned last 2
 console.log(testSlice.slice(2, 3));   // [ 5 ] - returned index 2 and stops at 3 (does not include 3)
 console.log(testSlice.slice(2, -2));  // [ 5, 6, 8 ] - returned from index 2 and did not include last 2
 console.log(testSlice);               // [ 1, 3, 5, 6, 8, 10, 12 ]
+
 // Splice alters the original array
+// splice(start)
+// splice(start, deleteCount)
 let testSplice = [1,3,5,6,8,10,12];
 console.log(testSplice.splice());       // [] - nothing returned
 console.log(testSplice.splice(3));      // [ 6, 8, 10, 12 ] - same as slice, returned all but first 3 elements

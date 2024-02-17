@@ -29,7 +29,7 @@ function getPortfolioValue(portfolio) {
     let {name, stocks} = portfolio; // Destructuring
     let stockPrices = {'aapl': 60, 'msft': 100, 'meta': 80, 'amzn': 50, 'googl': 120};
     let totalValue = 0;
-    for (stock in stocks) {
+    for (const stock in stocks) {
         totalValue = totalValue + (stockPrices[stock] * stocks[stock]);
         console.log(stocks[stock] + ' shares of ' + stock + ' at $' + stockPrices[stock]);
     }
