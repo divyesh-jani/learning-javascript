@@ -7,7 +7,6 @@ function isAnagram(strOne, strTwo) {
     return strOne.split('').sort().join('') === strTwo.split('').sort().join('');
 }
 
-
 // Time complexity O(n) Space complexity O(n)
 function checkAnagram(strOne, strTwo) {
     if (strOne.length !== strTwo.length) return false;

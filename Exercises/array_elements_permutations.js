@@ -7,8 +7,8 @@ function getPermutationsFromArray(inputArray) {
         let currentElement = inputArray[i];
         let otherElements = inputArray.slice(0, i).concat(inputArray.slice(i + 1));
         let otherPermutations = getPermutationsFromArray(otherElements);
-        for (let j = 0; j < otherPermutations.length; j = j + 1) {
-            allPermutations.push([currentElement].concat(otherPermutations[j]));
+        for (let permutation of otherPermutations) {
+            allPermutations.push([currentElement].concat(permutation));
         }
     }
     return allPermutations;
@@ -17,7 +17,6 @@ function getPermutationsFromArray(inputArray) {
 let inputArray = [10, 20, 30];
 console.log(getPermutationsFromArray(inputArray));
 // [[10,20,30], [10,30,20], [20,10,30], [20,30,10], [30,10,20], [30,20,10]]
-
 
 let inputArrayLarger = [1, 2, 3, 5];
 console.log(getPermutationsFromArray(inputArrayLarger));

@@ -2,11 +2,11 @@
 
 function generateCartesianProduct(setA, setB) {
     let cartesianProduct = [];
-    setA.forEach(a => {
-        for (b of setB) {
-            cartesianProduct.push([a, b]);
+    for (const elementA of setA) {
+        for (const elementB of setB) {
+            cartesianProduct.push([elementA, elementB]);
         }
-    });
+    }
     return cartesianProduct;
 }
 

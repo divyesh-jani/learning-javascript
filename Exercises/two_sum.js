@@ -19,7 +19,6 @@ function checkClassicTwoSum(inputArray, sum) {
     return false;
 }
 
-
 let inArray = [-10, 15, -8, 0, -5, -1, 0, 2, 4, -4, 7, 12, 50, 45, 20, 20, 25];
 let sumArray = [0, -12, 1, 28, -1, 7, 48, 20, 40, 63, 62, 80, -15, -10];
 let doesSumExistArray = sumArray.map((element) => checkClassicTwoSum(inArray, element));
