@@ -7,7 +7,6 @@
 function selectionSort(arrayToSort) {
     for (let i = 0; i < arrayToSort.length - 1; i = i + 1) {
         let smallestIndex = i;
-        // let smallestIndex = i + 1;
         for (let j = i + 1; j < arrayToSort.length; j = j + 1) {
             if (arrayToSort[j] < arrayToSort[smallestIndex]) {
                 smallestIndex = j;

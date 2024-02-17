@@ -1,7 +1,7 @@
 // Use recursion in binary search
 
 function recursiveBinarySearch(array, element, start, end) {
-    if (array.length === 0) return false;
+    if (array.length === 0) return -1;
     if (!start) start = 0;
     if (!end) end = array.length - 1;
     if (start > end) return -1;

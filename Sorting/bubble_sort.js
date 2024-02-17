@@ -1,6 +1,7 @@
 /* Bubble Sort
  * Traverse through the list, compare adjacent values,
- * and swap them if they aren't in order (small values bubble to top)
+ * and swap them if they aren't in order
+ * (large values bubble to top when sorting in ascending order)
  * Keep comparing and swapping until no more swapping is needed
  */
 

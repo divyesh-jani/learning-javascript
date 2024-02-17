@@ -1,4 +1,4 @@
-/* sort() ; returns original array, now sorted
+/* sort() : returns original array, now sorted
  * The default sort order is ascending, built upon converting the elements into strings
  * then comparing their sequences of UTF-16 code units values.
  * Numbers < Uppercase < Lowercase ; sortedListExample: [13, 2, Base, add]
@@ -20,7 +20,7 @@ console.log([3, '5', 11, 7, 90, '80', 225].sort());
 console.log([3, 5, 11, 7, 90, 80, 225].sort());
 // Result:  [ 11, 225, 3, 5, 7, 80, 90 ]
 
-/* sort(compareFn) ; returns original array, now sorted
+/* sort(compareFn) : returns original array, now sorted
  * compareFn: function that defines sort order.
  * The return value should be a number whose sign indicates the relative order of the two elements:
  * negative if a is less than b (no change needed, keep a before b), positive if a is greater than b (push a after b)
