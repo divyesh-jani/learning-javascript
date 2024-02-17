@@ -1,4 +1,5 @@
-// Queue is a First-In-First-Out data structure. Think stack of ticketing lines.
+// Queue is a First-In-First-Out data structure. Think queue of ticketing lines.
+// The first person to get in line gets ticket first
 
 class Queue {
     constructor() {
