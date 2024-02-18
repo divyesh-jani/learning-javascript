@@ -12,11 +12,11 @@ function getShortestSubstring(s, t) {
     let minWindowLength;
     let charsFound = 0;
     while (right < s.length) {
-        const char = s[right];
-        if (tMap[char] > 0) {
+        const rightChar = s[right];
+        if (tMap[rightChar] > 0) {
             charsFound = charsFound + 1;
         }
-        tMap[char] = (tMap[char] || 0) - 1;
+        tMap[rightChar] = (tMap[rightChar] || 0) - 1;
         right = right + 1;
         while (charsFound === t.length) {
             if (!minWindowLength || right - left < minWindowLength) {
