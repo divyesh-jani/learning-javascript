@@ -9,7 +9,7 @@ function findFirstAndLastBinarySearch(arr, target) {
     if (foundIndex === -1) return targetLocation;
     let maxIndex = foundIndex;
     while (arr[maxIndex] === target) {  // when maxIndex goes out of bounds, arr[maxIndex] will be undefined
-        targetLocation[1] = maxIndex;   // so not necessary but cal check for (maxIndex <= arr.length - 1)
+        targetLocation[1] = maxIndex;   // so not necessary but can check for (maxIndex <= arr.length - 1)
         maxIndex = maxIndex + 1;
     }
     let minIndex = foundIndex;

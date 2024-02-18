@@ -15,15 +15,15 @@ For index 3 - [6], [6, 2], [1, 6], [4, 1, 6], [3, 4, 1, 6]
 For index 4 - [2]
 */
 
-function countSubarrays(arr) {
-    if (!arr || arr.length === 0) return [];
+function countSubArrays(inputArray) {
+    if (!inputArray || inputArray.length === 0) return [];
     let finalArray = [];
-    for (let i = 0; i < arr.length; i = i + 1) {
+    for (let i = 0; i < inputArray.length; i = i + 1) {
         let numberOfSubArrays = 1;
-        let arrayLength = arr.length;
+        let arrayLength = inputArray.length;
         let j = i + 1;
         while (j < arrayLength) {
-            if (arr[i] > arr[j] ) {
+            if (inputArray[i] > inputArray[j] ) {
                 numberOfSubArrays = numberOfSubArrays + 1;
                 j = j + 1;
             } else {
@@ -32,7 +32,7 @@ function countSubarrays(arr) {
         }
         j = i - 1;
         while (j >= 0) {
-            if (arr[j] < arr[i]) {
+            if (inputArray[j] < inputArray[i]) {
                 numberOfSubArrays = numberOfSubArrays + 1;
                 j = j - 1;
             } else {
@@ -46,9 +46,9 @@ function countSubarrays(arr) {
 
 
 let A = [3, 4, 1, 6, 2];
-console.log(countSubarrays(A));
+console.log(countSubArrays(A));
 // [ 1, 3, 1, 5, 1 ];
 
 let B = [2, 4, 7, 1, 5, 3];
-console.log(countSubarrays(B));
+console.log(countSubArrays(B));
 // [ 1, 2, 6, 1, 3, 1 ];

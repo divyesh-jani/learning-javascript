@@ -14,7 +14,7 @@ function getMinCodeEntryTime(N, M, C) {
     let totalTime = 0;
     let initialLockInteger = 1;
     for (let nextCode of C) {
-        let oneWayDistance = Math.min(initialLockInteger - nextCode);
+        let oneWayDistance = initialLockInteger - nextCode;
         oneWayDistance = Math.sqrt(oneWayDistance * oneWayDistance);
         let shortestDistance = Math.min(oneWayDistance, (N - oneWayDistance));
         totalTime = totalTime + shortestDistance;

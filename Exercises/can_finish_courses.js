@@ -18,11 +18,9 @@ function canTakeAllCourses(numberOfCourses, prerequisiteArray) {
         if (visitedCourses.has(course)) return false;
         if (!prerequisiteMap[course]) return true;
         visitedCourses.add(course);
-        if (prerequisiteMap[course]) {
-            for (let nextCourse of prerequisiteMap[course]) {
-                if (!_isFreeOfCyclicDependency(nextCourse)) {
-                    return false;
-                }
+        for (let nextCourse of prerequisiteMap[course]) {
+            if (!_isFreeOfCyclicDependency(nextCourse)) {
+                return false;
             }
         }
         visitedCourses.delete(course);
