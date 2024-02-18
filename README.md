@@ -64,6 +64,7 @@
     - [Merge Sorted Arrays](./Exercises/merge_sorted_arrays.js)
     - [Remove Duplicates](./Exercises/remove_duplicates.js)
     - [Two Sum](./Exercises/two_sum.js)
+    - [Four Sum](./Exercises/four_sum.js)
     - [Rotate Array](./Exercises/rotate_array.js)
     - [Permutations of Elements in Array](./Exercises/array_elements_permutations.js)
     - [Cartesian Product](./Exercises/cartesian_product.js)
