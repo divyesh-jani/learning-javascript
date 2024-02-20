@@ -117,3 +117,14 @@ console.log(testShiftUnshift);              // [ 1, 3, 5 ]
 console.log(testShiftUnshift.shift());      // 1 - shift = pop;  returns removed element
 console.log(testShiftUnshift.shift());      // 3 - shift = pop;  returns removed element
 console.log(testShiftUnshift);              // [5]
+
+// Flatten array
+// flat(depth)
+// default depth is 1
+let nestedArray = [1, 2, [3, 4, [5, [6, 7, 8, [9], 10, 11], 12], 13, 14, [15, 16, [17, [18, 19, [20]], 21]]]];
+console.log(nestedArray.flat());
+// [ 1, 2, 3, 4, [ 5, [ 6, 7, 8, [Array], 10, 11 ], 12 ], 13, 14, [ 15, 16, [ 17, [Array], 21 ] ] ]
+console.log(nestedArray.flat(2));
+// [ 1, 2, 3, 4, 5, [ 6, 7, 8, [ 9 ], 10, 11 ], 12, 13, 14, 15, 16, [ 17, [ 18, 19, [Array] ], 21 ] ]
+console.log(nestedArray.flat(Infinity));
+// [ 1,  2,  3,  4,  5,  6,  7, 8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]

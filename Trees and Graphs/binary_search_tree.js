@@ -71,6 +71,22 @@ class BinarySearchTree {
         return rootNode.value;
     }
 
+    getMaxTreeDepth(root = this.root) {
+        if (root === null) return 0;
+        return 1 + Math.max(this.getMaxTreeDepth(root.left), this.getMaxTreeDepth(root.right));
+    }
+
+    getMinTreeDepth(root = this.root) {
+        if (root === null) return 0;
+        if (root.left && root.right) {
+            return 1 + Math.min(this.getMinTreeDepth(root.left), this.getMinTreeDepth(root.right));
+        } else if (root.left) {
+            return 1 + this.getMinTreeDepth(root.left);
+        } else {
+            return 1 + this.getMinTreeDepth(root.right);
+        }
+    }
+
 }
 
 let myBST = new BinarySearchTree();
@@ -105,5 +121,7 @@ console.log(myBST.has(30));     // false
 
 console.log('Total elements found : ', [1,5,6,8,10,11,12,15,18,19,20,21,22,26,30].reduce((a, e) => myBST.has(e) ?  a + 1 : a, 0));
 
-console.log(myBST.getMinValue());   // 5
-console.log(myBST.getMaxValue());   // 26
+console.log(myBST.getMinValue());       // 5
+console.log(myBST.getMaxValue());       // 26
+console.log(myBST.getMaxTreeDepth());   // 4
+console.log(myBST.getMinTreeDepth());   // 3
