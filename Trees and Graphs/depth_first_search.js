@@ -52,7 +52,7 @@ class BinarySearchTree {
     }
 
     // Traverse left, read, then go right
-    // Ensures data is read in acending order
+    // Ensures data is read in ascending order
     inOrder(root = this.root) {
         if (root) {
             this.inOrder(root.left);
