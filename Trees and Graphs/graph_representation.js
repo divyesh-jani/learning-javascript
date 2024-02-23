@@ -33,9 +33,7 @@ let adjacencyList = {
 };
 
 /* Advantages of adjacency list:
- * 
  * Very efficient compared to matric since we store only edges that exist.
  * Difficult to store additional data in matrix such as weight of edge.
  * Finding and inserting adjacent nodes is 0(1) compared to 0(n) in matrix.
- * 
  */
