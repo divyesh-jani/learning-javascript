@@ -87,4 +87,5 @@
     - [Kth Permutation](./Exercises/kth_permutation.js)
     - [Shortest Substring](./Exercises/shortest_substring.js)
     - [Contiguous Subarray Averages](./Exercises/contiguous_subarray_averages.js)
+    - [Custom Data Structure](./Exercises/custom_data_structure.js)
     
