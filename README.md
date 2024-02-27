@@ -70,6 +70,7 @@
     - [Rotate Array](./Exercises/rotate_array.js)
     - [Permutations of Elements in Array](./Exercises/array_elements_permutations.js)
     - [Cartesian Product](./Exercises/cartesian_product.js)
+    - [Common Prefix](./Exercises/common_prefix.js)
     - [Robot Path](./Exercises/robot_path.js)
     - [Tower of Hanoi](./Exercises/tower_of_hanoi.js)
     - [Flatten Nested Array](./Exercises/flatten_array.js)
