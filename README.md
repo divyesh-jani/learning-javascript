@@ -24,6 +24,7 @@
     - [Factorial](./Recursion/factorial.js)
     - [Exponents](./Recursion/exponents.js)
     - [Fibonacci](./Recursion/fibonacci.js)
+    - [Power of Four](./Recursion/power_of_four.js)
 3. Searching
     - [Linear Search](./Searching/linear_search.js)
     - [Binary Search](./Searching/binary_search.js)
@@ -53,6 +54,7 @@
     - [Is Palindrome](./Exercises/check_palindrome.js)
     - [Is Prime](./Exercises/check_prime.js)
     - [Is Power of Two](./Exercises/power_of_two.js)
+    - [Is Power of Four](./Exercises/power_of_four.js)
     - [Is Anagram](./Exercises/is_anagram.js)
     - [Factorial](./Exercises/factorial.js)
     - [Fibonacci](./Exercises/fibonacci.js)
