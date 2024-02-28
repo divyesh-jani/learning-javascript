@@ -25,6 +25,7 @@
     - [Exponents](./Recursion/exponents.js)
     - [Fibonacci](./Recursion/fibonacci.js)
     - [Power of Four](./Recursion/power_of_four.js)
+    - [Reverse String](./Recursion/reverse_string.js)
 3. Searching
     - [Linear Search](./Searching/linear_search.js)
     - [Binary Search](./Searching/binary_search.js)
