@@ -44,6 +44,7 @@
     - [Circular Queue](./Stacks%20and%20Queues/circular_queue.js)
 6. Linked Lists and Tables
     - [Linked List](./Linked%20Lists%20and%20Tables/linked_list.js)
+    - [Doubly Linked List](./Linked%20Lists%20and%20Tables/doubly_linked_list.js)
     - [Hash Table](./Linked%20Lists%20and%20Tables/hash_table.js)
 7. Trees and Graphs
     - [BST: Binary Search Tree](./Trees%20and%20Graphs/binary_search_tree.js)
