@@ -99,6 +99,17 @@ class LinkedList {
         this.head = previousNode;
     }
 
+    printMiddleNode(head = this.head) {
+        if (!head) return null;
+        let fast = head;
+        let slow = head;
+        while (fast && fast.next) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        console.log(slow.value);
+    }
+
     _findNodeAtIndex(index) {
         let traversePointer = this.head;
         for (let i = 0; i < index; i = i + 1) {
@@ -135,11 +146,13 @@ console.log(myLinkedList.isEmpty());        // false
 myLinkedList.prepend('Ben');
 console.log(myLinkedList.getSize());        // 2
 myLinkedList.printList();                   // Ben -> Adam -> null
+myLinkedList.printMiddleNode();             // Adam
 myLinkedList.append('Chris');
 myLinkedList.prepend('Dan');
 myLinkedList.append('Emily');
 myLinkedList.printList();                   // Dan -> Ben -> Adam -> Chris -> Emily -> null
 console.log(myLinkedList.getSize());        // 5
+myLinkedList.printMiddleNode();             // Adam
 
 console.log('---Insert operations---');
 myLinkedList.insert('Frank', 3);
@@ -148,10 +161,12 @@ myLinkedList.insert('Gus', 0);
 myLinkedList.printList();                       // Gus -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> null
 myLinkedList.insert('Hank', 7);
 myLinkedList.printList();                       // Gus -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> Hank -> null
+myLinkedList.printMiddleNode();                 // Frank
 console.log(myLinkedList.insert('Ivan', 9));    // Cannot insert element outside of list range
 myLinkedList.insert('John', 1);
 myLinkedList.printList();                       // Gus -> John -> Dan -> Ben -> Adam -> Frank -> Chris -> Emily -> Hank -> null
 console.log(myLinkedList.getSize());            // 9
+myLinkedList.printMiddleNode();                 // Adam
 
 console.log('---Remove by Index---');
 myLinkedList.removeByIndex(5);
@@ -164,10 +179,12 @@ console.log(myLinkedList.removeByIndex(6));     // Cannot remove element not in 
 myLinkedList.removeByIndex(1);
 myLinkedList.printList();                       // John -> Ben -> Adam -> Chris -> Emily -> null
 console.log(myLinkedList.getSize());            // 5
+myLinkedList.printMiddleNode();                 // Adam
 
 console.log('---Remove by Value---');
 myLinkedList.removeByValue('Adam');
 myLinkedList.printList();                       // John -> Ben -> Chris -> Emily -> null
+myLinkedList.printMiddleNode();                 // Chris
 myLinkedList.removeByValue('John');
 myLinkedList.printList();                       // Ben -> Chris -> Emily -> null
 console.log(myLinkedList.removeByValue('Adam'));// Cannot remove element not in list
@@ -184,8 +201,10 @@ console.log('---Reverse---');
 myLinkedList.insert('Kane', 0);
 myLinkedList.insert('Larry', 3);
 myLinkedList.printList();                       // Kane -> Ben -> Chris -> Larry -> null
+myLinkedList.printMiddleNode();                 // Chris
 myLinkedList.reverse();
 myLinkedList.printList();                       // Larry -> Chris -> Ben -> Kane -> null
+myLinkedList.printMiddleNode();                 // Ben
 myLinkedList.insert('Mark', 1);
 myLinkedList.reverse();
 myLinkedList.printList();                       // Kane -> Ben -> Chris -> Mark -> Larry -> null

@@ -87,7 +87,7 @@ class BinarySearchTree {
         }
     }
 
-    printElementsByLevel(root = this.root) {
+    printTreeByLevel(root = this.root) {
         if (!root) return [];
         let nodesByLevel = [];
         let nodesToTraverse = [root];
@@ -105,7 +105,7 @@ class BinarySearchTree {
         return nodesByLevel;
     }
 
-    printElementsWithLevel(root = this.root) {
+    printTreeWithLevel(root = this.root) {
         if (!root) return [];
         let nodesByLevel = {};
         let nodesToTraverse = [root];
@@ -134,13 +134,7 @@ console.log(myBST.isEmpty());       // true
 myBST.insert(10);
 console.log(myBST.isEmpty());       // false
 
-myBST.insert(20);
-myBST.insert(12);
-myBST.insert(8);
-myBST.insert(26);
-myBST.insert(15);
-myBST.insert(21);
-myBST.insert(5);
+[20,12,8,26,15,21,5].forEach(a => myBST.insert(a));
 
 console.log(myBST.has(1));      // false
 console.log(myBST.has(5));      // true
@@ -165,7 +159,7 @@ console.log(myBST.getMaxValue());       // 26
 console.log(myBST.getMaxTreeDepth());   // 4
 console.log(myBST.getMinTreeDepth());   // 3
 
-console.log(myBST.printElementsByLevel());
+console.log(myBST.printTreeByLevel());
 /*
 [
     [ 10 ],
@@ -175,7 +169,7 @@ console.log(myBST.printElementsByLevel());
 ]
 */
 
-console.log(myBST.printElementsWithLevel());
+console.log(myBST.printTreeWithLevel());
 /*
 {
     level_1: [ 10 ],
