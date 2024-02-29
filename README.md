@@ -58,6 +58,7 @@
     - [Is Power of Two](./Exercises/power_of_two.js)
     - [Is Power of Four](./Exercises/power_of_four.js)
     - [Is Anagram](./Exercises/is_anagram.js)
+    - [Is Array Monotonic](./Exercises/is_monotonic.js)
     - [Factorial](./Exercises/factorial.js)
     - [Fibonacci](./Exercises/fibonacci.js)
     - [Valid Paranthesis](./Exercises/valid_paranthesis.js)

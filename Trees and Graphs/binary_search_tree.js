@@ -87,6 +87,45 @@ class BinarySearchTree {
         }
     }
 
+    printElementsByLevel(root = this.root) {
+        if (!root) return [];
+        let nodesByLevel = [];
+        let nodesToTraverse = [root];
+        while (nodesToTraverse.length) {
+            let levelArr = [];
+            let nodesAtLevel = nodesToTraverse.length;
+            for (let i = 0; i < nodesAtLevel; i = i + 1) {
+                let node = nodesToTraverse.shift();
+                levelArr.push(node.value);
+                if (node.left) nodesToTraverse.push(node.left);
+                if (node.right) nodesToTraverse.push(node.right);
+            }
+            nodesByLevel.push(levelArr);
+        }
+        return nodesByLevel;
+    }
+
+    printElementsWithLevel(root = this.root) {
+        if (!root) return [];
+        let nodesByLevel = {};
+        let nodesToTraverse = [root];
+        let level = 0;
+        while (nodesToTraverse.length) {
+            let levelArr = [];
+            let nodesAtLevel = nodesToTraverse.length;
+            for (let i = 0; i < nodesAtLevel; i = i + 1) {
+                let node = nodesToTraverse.shift();
+                levelArr.push(node.value);
+                if (node.left) nodesToTraverse.push(node.left);
+                if (node.right) nodesToTraverse.push(node.right);
+            }
+            level = level + 1;
+            let levelKey = 'level_' + level;
+            nodesByLevel[levelKey] = levelArr;
+        }
+        return nodesByLevel;
+    }
+
 }
 
 let myBST = new BinarySearchTree();
@@ -125,3 +164,23 @@ console.log(myBST.getMinValue());       // 5
 console.log(myBST.getMaxValue());       // 26
 console.log(myBST.getMaxTreeDepth());   // 4
 console.log(myBST.getMinTreeDepth());   // 3
+
+console.log(myBST.printElementsByLevel());
+/*
+[
+    [ 10 ],
+    [ 8, 20 ],
+    [ 5, 12, 26 ],
+    [ 15, 21 ]
+]
+*/
+
+console.log(myBST.printElementsWithLevel());
+/*
+{
+    level_1: [ 10 ],
+    level_2: [ 8, 20 ],
+    level_3: [ 5, 12, 26 ],
+    level_4: [ 15, 21 ]
+}
+*/
