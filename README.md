@@ -39,19 +39,74 @@
     - [Quick Sort](./Sorting/quick_sort.js)
 5. Stacks and Queues
     - [Stacks](./Stacks%20and%20Queues/stacks.js)
+        - Push
+        - Pop
+        - Peek
+        - Print
     - [Queues Using Array](./Stacks%20and%20Queues/queues_using_array.js)
+        - Enqueue
+        - Dequeue
+        - Peek
+        - Print
     - [Queues Using Object](./Stacks%20and%20Queues/queues_using_object.js)
+        - Enqueue
+        - Dequeue
+        - Peek
+        - Print
     - [Circular Queue](./Stacks%20and%20Queues/circular_queue.js)
+        - Enqueue
+        - Dequeue
+        - Peek
+        - Find Available Spots
+        - Print
 6. Linked Lists and Tables
     - [Linked List](./Linked%20Lists%20and%20Tables/linked_list.js)
+        - Insert Node
+        - Remove Node
+        - Find Node
+        - Find Middle Node
+        - Reverse List
+        - Print List
     - [Doubly Linked List](./Linked%20Lists%20and%20Tables/doubly_linked_list.js)
+        - Insert Node
+        - Remove Node
+        - Find Node
+        - Find Middle Node
+        - Reverse List
+        - Print List
     - [Hash Table](./Linked%20Lists%20and%20Tables/hash_table.js)
+        - Set Key/Value
+        - Get Key/Value
+        - Remove Key/Value
+        - Print Table
 7. Trees and Graphs
     - [BST: Binary Search Tree](./Trees%20and%20Graphs/binary_search_tree.js)
+        - Insert Node
+        - Has Node
+        - Minimum Value in Tree
+        - Maximum Value in Tree
+        - Minimum Tree Depth
+        - Maximum Tree Depth
+        - Path from Root to Every Leaf
+        - Value Sum from Root to Leaf
+        - All Path Sums
+        - Print Tree by Level
     - [DFS: Depth First Search](./Trees%20and%20Graphs/depth_first_search.js)
+        - Pre-Order Traversal
+        - In-Order Traversal
+        - Post-Order Traversal
     - [BFS: Breadth First Search](./Trees%20and%20Graphs/breadth_first_search.js)
+        - Breadth First Traversal
     - [Graph Representation](./Trees%20and%20Graphs/graph_representation.js)
+        - Adjacency Matrix
+        - Adjacency List
     - [Undirected Graph](./Trees%20and%20Graphs/graph.js)
+        - Add Vertex
+        - Add Edge
+        - Remove Vertex
+        - Remove Edge
+        - Has Edge
+        - Print
 8. Exercises
     - [Is Palindrome](./Exercises/check_palindrome.js)
     - [Is Prime](./Exercises/check_prime.js)

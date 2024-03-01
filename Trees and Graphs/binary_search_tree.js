@@ -157,6 +157,21 @@ class BinarySearchTree {
         }
     }
 
+    getAllPathSums(root = this.root) {
+        let allSums = [];
+        function getPathSums(node, sum = 0) {
+            if (!node) return allSums;
+            if (!node.left && !node.right) {
+                allSums.push(sum + node.value);
+            } else {
+                getPathSums(node.left, sum + node.value);
+                getPathSums(node.right, sum + node.value);
+            }
+        }
+        getPathSums(root);
+        return allSums;
+    }
+
 }
 
 let myBST = new BinarySearchTree();
@@ -216,3 +231,5 @@ console.log(myBST.getPathsFromRootToLeaf());
 */
 console.log([5,10,12,18,21,22,23,30,32,40,56,57,60,70,77].map(a => myBST.doesPathSumExist(a)));
 // [ f, f, f, f, f, f, true, f, f, f, f, true, f, f, true ]
+console.log(myBST.getAllPathSums());
+// [ 23, 57, 77 ]
