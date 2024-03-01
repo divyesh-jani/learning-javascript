@@ -126,31 +126,61 @@ class BinarySearchTree {
         return nodesByLevel;
     }
 
+    getPathsFromRootToLeaf(root = this.root) {
+        let allPaths = [];
+        let currentPath = '';
+        function getPathsRecursively(node, path) {
+            if (!node) return allPaths;
+            if (path === '') {
+                path = node.value;
+            } else {
+                path = path + ' -> ' + node.value;
+            }
+            if (!node.left && !node.right) {
+                allPaths.push(path);
+            } else {
+                getPathsRecursively(node.left, path);
+                getPathsRecursively(node.right, path);
+            }
+        }
+        getPathsRecursively(root, currentPath);
+        return allPaths;
+    }
+
+    doesPathSumExist(sum, root = this.root) {
+        if (!root) return false;
+        if (!root.left && !root.right) {
+            return root.value === sum ? true : false;
+        } else {
+            let newSum = sum - root.value;
+            return this.doesPathSumExist(newSum, root.left) || this.doesPathSumExist(newSum, root.right);
+        }
+    }
+
 }
 
 let myBST = new BinarySearchTree();
-console.log(myBST.isEmpty());       // true
-
+console.log(myBST.isEmpty());                   // true
+console.log(myBST.getPathsFromRootToLeaf());    // []
+console.log(myBST.doesPathSumExist(10));        // false;
 myBST.insert(10);
-console.log(myBST.isEmpty());       // false
+console.log(myBST.isEmpty());                   // false
+console.log(myBST.getPathsFromRootToLeaf());    // [ 10 ]
+console.log(myBST.doesPathSumExist(10));        // true;
+[20,12,8,26,15,21,5].forEach(node => myBST.insert(node));
+/*
+        myBST
+         10
+        /  \
+       8    20
+      /    /  \
+     5   12    26
+          \    /
+          15  21
+*/
 
-[20,12,8,26,15,21,5].forEach(a => myBST.insert(a));
-
-console.log(myBST.has(1));      // false
-console.log(myBST.has(5));      // true
-console.log(myBST.has(6));      // false
-console.log(myBST.has(8));      // true
-console.log(myBST.has(10));     // true
-console.log(myBST.has(11));     // false
-console.log(myBST.has(12));     // true
-console.log(myBST.has(15));     // true
-console.log(myBST.has(18));     // false
-console.log(myBST.has(19));     // false
-console.log(myBST.has(20));     // true
-console.log(myBST.has(21));     // true
-console.log(myBST.has(22));     // false
-console.log(myBST.has(26));     // true
-console.log(myBST.has(30));     // false
+console.log([1,5,6,8,10,11,12,15,18,19,20,21,22,26,30].map(node => myBST.has(node)));
+// [ f, true, f, true, true, f, true, true, f, f, true, true, f, true, f ]
 
 console.log('Total elements found : ', [1,5,6,8,10,11,12,15,18,19,20,21,22,26,30].reduce((a, e) => myBST.has(e) ?  a + 1 : a, 0));
 
@@ -158,7 +188,6 @@ console.log(myBST.getMinValue());       // 5
 console.log(myBST.getMaxValue());       // 26
 console.log(myBST.getMaxTreeDepth());   // 4
 console.log(myBST.getMinTreeDepth());   // 3
-
 console.log(myBST.printTreeByLevel());
 /*
 [
@@ -168,7 +197,6 @@ console.log(myBST.printTreeByLevel());
     [ 15, 21 ]
 ]
 */
-
 console.log(myBST.printTreeWithLevel());
 /*
 {
@@ -178,3 +206,13 @@ console.log(myBST.printTreeWithLevel());
     level_4: [ 15, 21 ]
 }
 */
+console.log(myBST.getPathsFromRootToLeaf());
+/*
+[
+    '10 -> 8 -> 5',
+    '10 -> 20 -> 12 -> 15',
+    '10 -> 20 -> 26 -> 21'
+]
+*/
+console.log([5,10,12,18,21,22,23,30,32,40,56,57,60,70,77].map(a => myBST.doesPathSumExist(a)));
+// [ f, f, f, f, f, f, true, f, f, f, f, true, f, f, true ]
