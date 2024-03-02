@@ -151,6 +151,7 @@
     - [Sorted Array to BST](./Exercises/sorted_array_to_bst.js)
     - [Sorted Linked List to BST](./Exercises/sorted_ll_to_bst.js)
     - [BST to Sorted Linked List](./Exercises/bst_to_sorted_ll.js)
+    - [Binary Tree to Linked List](./Exercises/bt_to_ll.js)
     - [Circular Gas Station](./Exercises/circular_gas_station.js)
     - [Course Prerequisites](./Exercises/can_finish_courses.js)
     - [Kth Permutation](./Exercises/kth_permutation.js)
