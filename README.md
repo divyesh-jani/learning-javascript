@@ -147,6 +147,7 @@
     - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
     - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
     - [Binary Tree Symmetry](./Exercises/check_binary_tree_symmetry.js)
+    - [Sorted Array to BST](./Exercises/sorted_array_to_bst.js)
     - [Identical Trees](./Exercises/identical_trees.js)
     - [Circular Gas Station](./Exercises/circular_gas_station.js)
     - [Course Prerequisites](./Exercises/can_finish_courses.js)
