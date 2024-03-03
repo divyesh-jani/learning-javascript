@@ -82,6 +82,7 @@
         - Value Sum from Root to Leaf
         - All Path Sums
         - Print Tree by Level
+        - Delete Node
     - [DFS: Depth First Search](./Trees%20and%20Graphs/depth_first_search.js)
         - Pre-Order Traversal
         - In-Order Traversal

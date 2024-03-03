@@ -55,20 +55,18 @@ class BinarySearchTree {
         return false;
     }
     
-    getMinValue() {
-        let rootNode = this.root;
-        while(rootNode.left !== null) {
-            rootNode = rootNode.left;
+    getMinValue(root = this.root) {
+        while(root.left !== null) {
+            root = root.left;
         }
-        return rootNode.value;
+        return root.value;
     }
 
-    getMaxValue() {
-        let rootNode = this.root;
-        while(rootNode.right !== null) {
-            rootNode = rootNode.right;
+    getMaxValue(root = this.root) {
+        while(root.right !== null) {
+            root = root.right;
         }
-        return rootNode.value;
+        return root.value;
     }
 
     getMaxTreeDepth(root = this.root) {
@@ -172,6 +170,32 @@ class BinarySearchTree {
         return allSums;
     }
 
+    delete(value) {
+        this.root = this._deleteNode(this.root, value);
+    }
+
+    _deleteNode(root, value) {
+        if(!root) return root;
+        if (value < root.value) {
+            root.left = this._deleteNode(root.left, value);
+        } else if (value > root.value) {
+            root.right = this._deleteNode(root.right, value);
+        } else {
+            if (!root.left && !root.right) return null;
+            if (!root.left) return root.right;
+            if (!root.right) return root.left;
+            // Calculate or get min value of right subtree using getMinValue
+            // root.value = this.getMinValue(root.right);
+            let subTreeRoot = root.right;
+            while(subTreeRoot.left !== null) {
+                subTreeRoot = subTreeRoot.left;
+            }
+            root.value = subTreeRoot.value;
+            root.right = this._deleteNode(root.right, root.value);
+        }
+        return root;
+    }
+
 }
 
 let myBST = new BinarySearchTree();
@@ -233,3 +257,41 @@ console.log([5,10,12,18,21,22,23,30,32,40,56,57,60,70,77].map(a => myBST.doesPat
 // [ f, f, f, f, f, f, true, f, f, f, f, true, f, f, true ]
 console.log(myBST.getAllPathSums());
 // [ 23, 57, 77 ]
+
+myBST.delete(20);
+/*
+        myBST
+         10
+        /  \
+       8    21
+      /    /  \
+     5   12    26
+          \
+           15
+*/
+console.log(myBST.printTreeByLevel());
+// [ [ 10 ], [ 8, 21 ], [ 5, 12, 26 ], [ 15 ] ]
+
+myBST.delete(15);
+/*
+        myBST
+         10
+        /  \
+       8    21
+      /    /  \
+     5   12    26
+*/
+console.log(myBST.printTreeByLevel());
+// [ [ 10 ], [ 8, 21 ], [ 5, 12, 26 ] ]
+
+myBST.delete(21);
+/*
+        myBST
+         10
+        /  \
+       8    26
+      /    /
+     5   12
+*/
+console.log(myBST.printTreeByLevel());
+// [ [ 10 ], [ 8, 26 ], [ 5, 12 ] ]
