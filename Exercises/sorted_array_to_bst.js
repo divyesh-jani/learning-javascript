@@ -10,7 +10,7 @@ class TreeNode {
 
 // Sorted Array to BST
 function convertToBST(input) {
-    if (input.length === 0) return;
+    if (input.length === 0) return null;
     let middleIndex = Math.floor((input.length - 1) / 2);
     let newRoot = new TreeNode(input[middleIndex]);
     newRoot.left = convertToBST(input.slice(0, middleIndex));
