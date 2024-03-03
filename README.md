@@ -148,6 +148,7 @@
     - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
     - [Binary Tree Symmetry](./Exercises/check_binary_tree_symmetry.js)
     - [Identical Trees](./Exercises/identical_trees.js)
+    - [Are Binary Trees Isomorphic](./Exercises/are_binary_trees_isomorphic.js)
     - [Is Binary Tree Balanced](./Exercises/is_binary_tree_balanced.js)
     - [Balance a Binary Search Tree](./Exercises/balance_a_bst.js)
     - [Sorted Array to BST](./Exercises/sorted_array_to_bst.js)
