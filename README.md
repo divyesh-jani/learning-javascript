@@ -49,10 +49,7 @@
         - Peek
         - Print
     - [Queues Using Object](./Stacks%20and%20Queues/queues_using_object.js)
-        - Enqueue
-        - Dequeue
-        - Peek
-        - Print
+    - [Queues Using Two Stacks](./Stacks%20and%20Queues/queue_using_stacks.js)
     - [Circular Queue](./Stacks%20and%20Queues/circular_queue.js)
         - Enqueue
         - Dequeue
@@ -68,12 +65,6 @@
         - Reverse List
         - Print List
     - [Doubly Linked List](./Linked%20Lists%20and%20Tables/doubly_linked_list.js)
-        - Insert Node
-        - Remove Node
-        - Find Node
-        - Find Middle Node
-        - Reverse List
-        - Print List
     - [Hash Table](./Linked%20Lists%20and%20Tables/hash_table.js)
         - Set Key/Value
         - Get Key/Value

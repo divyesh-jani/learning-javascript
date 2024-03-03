@@ -1,4 +1,4 @@
-// Queue using arrays was not the most optimal solution since dequeue was O(n)
+// Queue using an array was not the most optimal solution since dequeue was O(n)
 // Using objects, we can achieve both enqueue and dequeue in O(1)
 
 class Queue {
