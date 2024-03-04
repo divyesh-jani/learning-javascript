@@ -138,6 +138,7 @@
     - [First and Last Position](./Exercises/first_and_last_position.js)
     - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
     - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
+    - [Is Valid BST](./Exercises/is_valid_bst.js)
     - [Binary Tree Symmetry](./Exercises/check_binary_tree_symmetry.js)
     - [Identical Trees](./Exercises/identical_trees.js)
     - [Are Binary Trees Isomorphic](./Exercises/are_binary_trees_isomorphic.js)
@@ -153,4 +154,5 @@
     - [Shortest Substring](./Exercises/shortest_substring.js)
     - [Contiguous Subarray Averages](./Exercises/contiguous_subarray_averages.js)
     - [Custom Data Structure](./Exercises/custom_data_structure.js)
+    - [Coin Change](./Exercises/coin_change.js)
     
