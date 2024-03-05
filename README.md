@@ -131,6 +131,7 @@
     - [Contiguous Subarrays](./Exercises/contiguous_subarrays.js)
     - [Rotational Cipher](./Exercises/rotational_cipher.js)
     - [Pair Sums](./Exercises/pair_sums.js)
+    - [Palindrome Substrings](./Exercises/palindrome_substrings.js)
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
     - [Cafeteria Seats](./Exercises/cafeteria_seats.js)
     - [Planting Flowers](./Exercises/can_plant_flower.js)
