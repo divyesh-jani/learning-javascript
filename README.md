@@ -118,6 +118,8 @@
     - [Climbing Staircase](./Exercises/climbing_staircase.js)
     - [Merge Intervals](./Exercises/merge_intervals.js)
     - [Merge Sorted Arrays](./Exercises/merge_sorted_arrays.js)
+    - [Merge Three Sorted Arrays](./Exercises/merge_three_sorted_arrays.js)
+    - [Median of Sorted Arrays](./Exercises/median_of_sorted_arrays.js)
     - [Remove Duplicates](./Exercises/remove_duplicates.js)
     - [Two Sum](./Exercises/two_sum.js)
     - [Four Sum](./Exercises/four_sum.js)
