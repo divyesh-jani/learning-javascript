@@ -12,28 +12,28 @@ class BinarySearchTree {
         this.root = null;
     }
 
-    isEmpty() {
-        return this.root === null;
+    isEmpty(root = this.root) {
+        return root === null;
     }
 
-    insert(node) {
+    insert(node, root = this.root) {
         let newNode = new TreeNode(node);
-        if (this.isEmpty()) {
+        if (!root) {
             this.root = newNode;
         } else {
-            this._insertNode(this.root, newNode);
+            this._insertNode(root, newNode);
         }
     }
 
     _insertNode(rootNode, newNode) {
         if (newNode.value < rootNode.value) {
-            if (rootNode.left === null) {
+            if (!rootNode.left) {
                 rootNode.left = newNode;
             } else {
                 this._insertNode(rootNode.left, newNode);
             }
         } else {
-            if (rootNode.right === null) {
+            if (!rootNode.right) {
                 rootNode.right = newNode;
             } else {
                 this._insertNode(rootNode.right, newNode);
@@ -41,9 +41,8 @@ class BinarySearchTree {
         }
     }
 
-    has(value) {
-        if (this.isEmpty()) return false;
-        let rootNode = this.root;
+    has(value, rootNode = this.root) {
+        if (!rootNode) return false;
         while(rootNode) {
             if (rootNode.value === value) return true;
             if (rootNode.value < value) {
@@ -70,12 +69,12 @@ class BinarySearchTree {
     }
 
     getMaxTreeDepth(root = this.root) {
-        if (root === null) return 0;
+        if (!root) return 0;
         return 1 + Math.max(this.getMaxTreeDepth(root.left), this.getMaxTreeDepth(root.right));
     }
 
     getMinTreeDepth(root = this.root) {
-        if (root === null) return 0;
+        if (!root) return 0;
         if (root.left && root.right) {
             return 1 + Math.min(this.getMinTreeDepth(root.left), this.getMinTreeDepth(root.right));
         } else if (root.left) {
@@ -170,8 +169,8 @@ class BinarySearchTree {
         return allSums;
     }
 
-    delete(value) {
-        this.root = this._deleteNode(this.root, value);
+    delete(value, root = this.root) {
+        this.root = this._deleteNode(root, value);
     }
 
     _deleteNode(root, value) {
@@ -222,6 +221,7 @@ console.log([1,5,6,8,10,11,12,15,18,19,20,21,22,26,30].map(node => myBST.has(nod
 // [ f, true, f, true, true, f, true, true, f, f, true, true, f, true, f ]
 
 console.log('Total elements found : ', [1,5,6,8,10,11,12,15,18,19,20,21,22,26,30].reduce((a, e) => myBST.has(e) ?  a + 1 : a, 0));
+// Total Elements found : 8
 
 console.log(myBST.getMinValue());       // 5
 console.log(myBST.getMaxValue());       // 26

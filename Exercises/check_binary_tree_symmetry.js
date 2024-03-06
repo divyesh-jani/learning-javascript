@@ -2,9 +2,9 @@
 // both in terms of number of nodes (and children), their positions, and values.
 
 function isTreeSymmetric(treeHead) {
-    if (treeHead === null) return true;                     // head is null => tree is symmetric
+    if (!treeHead) return true;                     // head is null => tree is symmetric
     function _compareTreeSides(left, right) {
-        if (left === null && right === null) return true;   // No children on both nodes => tree is symmetric
+        if (!left && !right) return true;                   // No children on both nodes => tree is symmetric
         if (!left || !right) return false;                  // one of left or right exists and other doesn't => tree NOT symmetric
         if (left.value !== right.value) return false;       // left and right value not same => tree NOT symmetric
         // tree is symmetric only if both sides of tree are symmetric

@@ -30,7 +30,7 @@ class LinkedList {
     }
     append(value) {
         let newNode = new Node(value);
-        if (this.head === null) {
+        if (!this.head) {
             this.head = newNode;
         } else {
             let traversePointer = this.head;

@@ -13,28 +13,24 @@ class BinarySearchTree {
         this.root = null;
     }
 
-    isEmpty() {
-        return this.root === null;
-    }
-
-    insert(node) {
+    insert(node, root = this.root) {
         let newNode = new TreeNode(node);
-        if (this.isEmpty()) {
+        if (!root) {
             this.root = newNode;
         } else {
-            this._insertNode(this.root, newNode);
+            this._insertNode(root, newNode);
         }
     }
 
     _insertNode(rootNode, newNode) {
         if (newNode.value < rootNode.value) {
-            if (rootNode.left === null) {
+            if (!rootNode.left) {
                 rootNode.left = newNode;
             } else {
                 this._insertNode(rootNode.left, newNode);
             }
         } else {
-            if (rootNode.right === null) {
+            if (!rootNode.right) {
                 rootNode.right = newNode;
             } else {
                 this._insertNode(rootNode.right, newNode);
