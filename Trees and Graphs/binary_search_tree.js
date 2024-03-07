@@ -55,14 +55,16 @@ class BinarySearchTree {
     }
     
     getMinValue(root = this.root) {
-        while(root.left !== null) {
+        if (!root) return null;
+        while(root.left) {
             root = root.left;
         }
         return root.value;
     }
 
     getMaxValue(root = this.root) {
-        while(root.right !== null) {
+        if (!root) return null;
+        while(root.right) {
             root = root.right;
         }
         return root.value;
@@ -186,7 +188,7 @@ class BinarySearchTree {
             // Calculate or get min value of right subtree using getMinValue
             // root.value = this.getMinValue(root.right);
             let subTreeRoot = root.right;
-            while(subTreeRoot.left !== null) {
+            while(subTreeRoot.left) {
                 subTreeRoot = subTreeRoot.left;
             }
             root.value = subTreeRoot.value;
