@@ -20,20 +20,17 @@ Expected Output = 3
 */
 
 function getMaxAdditionalDinersCount(N, K, M, S) {
+    if (!S.length) return 1 + Math.floor((N - 1)/(K + 1));
     S.sort((a, b) => a - b);
     let totalNewSeatingAvailable = 0;
-    let initialPosition = 1;
+    let initialPosition = 0;
     let remainingPlaces = 0;
     let maintainSpace = K + 1;
-
     for (let dinerSeat of S) {
-        remainingPlaces = dinerSeat - initialPosition;
+        remainingPlaces = dinerSeat - initialPosition - 1;
         totalNewSeatingAvailable = totalNewSeatingAvailable + Math.floor(remainingPlaces / maintainSpace);
-        initialPosition = dinerSeat + maintainSpace;
+        initialPosition = dinerSeat + K;
     }
-    // remainingPlaces = N - initialPosition + 1;
-    // totalNewSeatingAvailable = totalNewSeatingAvailable + Math.ceil(remainingPlaces / maintainSpace);
-    // or
     remainingPlaces = N - S[M - 1];
     totalNewSeatingAvailable = totalNewSeatingAvailable + Math.floor(remainingPlaces / maintainSpace);
 
@@ -45,3 +42,15 @@ console.log(getMaxAdditionalDinersCount(10, 1, 2, [2, 6]));
 
 console.log(getMaxAdditionalDinersCount(15, 2, 3, [11, 6, 14]));
 // 1
+
+console.log(getMaxAdditionalDinersCount(10, 2, 0, []));
+// 4
+
+console.log(getMaxAdditionalDinersCount(10, 1, 0, []));
+// 5
+
+console.log(getMaxAdditionalDinersCount(1, 5, 0, []));
+// 1
+
+console.log(getMaxAdditionalDinersCount(0, 2, 0, []));
+// 0
