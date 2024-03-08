@@ -13,10 +13,10 @@ function getMedianQuick(arrayOne, arrayTwo) {
     while(left <= right) {
         let oneMaxLeftIndex = Math.floor((left + right) / 2);
         let twoMaxLeftIndex = Math.floor((arrayOneLength + arrayTwoLength + 1) / 2 - oneMaxLeftIndex);
-        let oneMaxLeftValue = oneMaxLeftIndex !== 0 ? arrayOne[oneMaxLeftIndex - 1] : Number.MIN_SAFE_INTEGER;
-        let oneMinRightValue = oneMaxLeftIndex !== arrayOneLength ? arrayOne[oneMaxLeftIndex] : Number.MAX_SAFE_INTEGER;
-        let twoMaxLeftValue = twoMaxLeftIndex !== 0 ? arrayTwo[twoMaxLeftIndex - 1] : Number.MIN_SAFE_INTEGER;
-        let twoMinRightValue = twoMaxLeftIndex !== arrayTwoLength ? arrayTwo[twoMaxLeftIndex] : Number.MAX_SAFE_INTEGER;
+        let oneMaxLeftValue = oneMaxLeftIndex > 0 ? arrayOne[oneMaxLeftIndex - 1] : Number.MIN_SAFE_INTEGER;
+        let oneMinRightValue = oneMaxLeftIndex < arrayOneLength ? arrayOne[oneMaxLeftIndex] : Number.MAX_SAFE_INTEGER;
+        let twoMaxLeftValue = twoMaxLeftIndex > 0 ? arrayTwo[twoMaxLeftIndex - 1] : Number.MIN_SAFE_INTEGER;
+        let twoMinRightValue = twoMaxLeftIndex < arrayTwoLength ? arrayTwo[twoMaxLeftIndex] : Number.MAX_SAFE_INTEGER;
         if(oneMaxLeftValue <= twoMinRightValue && twoMaxLeftValue <= oneMinRightValue) {
             if((arrayOneLength + arrayTwoLength) % 2 === 1) return Math.max(oneMaxLeftValue, twoMaxLeftValue);
             return ((Math.max(oneMaxLeftValue, twoMaxLeftValue) + Math.min(oneMinRightValue, twoMinRightValue)) / 2);
@@ -33,12 +33,7 @@ function getMedian(arrayOne, arrayTwo) {
     if (!arrayOne.length && !arrayTwo.length) return '';
     let mergedArray = [];
     let totalElements = arrayOne.length + arrayTwo.length;
-    let requiredIndex;
-    if (totalElements % 2 === 0) {
-        requiredIndex = Math.ceil(totalElements / 2);
-    } else {
-        requiredIndex = Math.floor(totalElements / 2);
-    }
+    let requiredIndex = Math.floor(totalElements / 2);
     let i = 0;
     let j = 0;
     while (mergedArray.length <= requiredIndex) {
@@ -53,7 +48,7 @@ function getMedian(arrayOne, arrayTwo) {
     if (totalElements % 2 === 0) {
         return ((mergedArray[mergedArray.length - 1] + mergedArray[mergedArray.length - 2]) / 2);
     }
-    return mergedArray[Math.floor(totalElements / 2)];
+    return mergedArray[mergedArray.length - 1];
 }
 
 console.log(getMedianQuick([5,10,12,15,20,30],[1,2,5,8,13,20,25,40]));  // 12.5

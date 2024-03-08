@@ -121,6 +121,7 @@
     - [Merge Three Sorted Arrays](./Exercises/merge_three_sorted_arrays.js)
     - [Median of Sorted Arrays](./Exercises/median_of_sorted_arrays.js)
     - [Remove Duplicates](./Exercises/remove_duplicates.js)
+    - [Group Anagrams](./Exercises/group_anagrams.js)
     - [Two Sum](./Exercises/two_sum.js)
     - [Four Sum](./Exercises/four_sum.js)
     - [Rotate Array](./Exercises/rotate_array.js)
