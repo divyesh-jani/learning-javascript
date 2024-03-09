@@ -153,6 +153,8 @@
     - [Sorted Array to BST](./Exercises/sorted_array_to_bst.js)
     - [Sorted Linked List to BST](./Exercises/sorted_ll_to_bst.js)
     - [BST to Sorted Linked List](./Exercises/bst_to_sorted_ll.js)
+    - [BST to Sorted Doubly Linked List](./Exercises/bst_to_sorted_dll.js)
+    - [BST to Circular Linked List](./Exercises/bst_to_sorted_cll.js)
     - [Binary Tree to Linked List](./Exercises/bt_to_ll.js)
     - [Circular Gas Station](./Exercises/circular_gas_station.js)
     - [Course Prerequisites](./Exercises/can_finish_courses.js)

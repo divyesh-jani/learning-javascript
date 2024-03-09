@@ -1,4 +1,4 @@
-// Convert a BST to sorted Linked List
+// Convert a BST to sorted Circular Linked List
 
 class TreeNode {
     constructor(value) {
@@ -8,22 +8,22 @@ class TreeNode {
     }
 }
 
-// BST to Sorted Linked List
-function convertToSortedLL(head) {
+// BST to Sorted Circular Linked List
+function convertToSortedCLL(head) {
     let tempNode = new TreeNode(null);
     let previous = tempNode;
     function inOrder(current) {
         if (current) {
             inOrder(current.left);
-            previous.left = null;
             previous.right = current;
+            current.left = previous;
             previous = current;
             inOrder(current.right);
         }
     }
     inOrder(head);
-    previous.left = null;
-    previous.right = null;
+    tempNode.right.left = previous;
+    previous.right = tempNode.right;
     return tempNode.right;
 }
 // Time Complexity O(n); Space Complexity is O(h) where is h is height of tree
@@ -36,24 +36,29 @@ let b = { value: 8, left: d, right: f };
 let c = { value: 15, left: null, right: e };
 let a = { value: 10, left: b, right: c };
 
-console.log('----- Print Sorted LL -----');
-printList(convertToSortedLL(a));
+console.log('----- Print Sorted CLL -----');
+printList(convertToSortedCLL(a));
 /*
 root left right
-    5 null 8
-    8 null 8
-    8 null 9
-    9 null 10
-    10 null 15
-    15 null 20
-    20 null null
+    5 20 8
+    8 5 8
+    8 8 9
+    9 8 10
+    10 9 15
+    15 10 20
+    20 15 5
+    5 20 8
+    8 5 8
+    8 8 9
 */
 
 // Helper functions for Testing
 function printList(root) {
     console.log('root', 'left', 'right');
-    while (root) {
+    let i = 0;
+    while (root && i < 10) {
         console.log(root.value, root.left ? root.left.value : 'null', root.right ? root.right.value : null);
         root = root.right;
+        i = i + 1;
     }
 }
