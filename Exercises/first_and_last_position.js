@@ -1,47 +1,8 @@
 // Given a sorted array of integers arr, and an integer target, find the first and last position of target in arr.
 // Return [-1, -1] if element cannot be found
 
-// Generally best result time with binary search, but on testing 'findFirstAndLast' turns out more efficient
-function findFirstAndLastBinarySearch(arr, target) {
-    let targetLocation = [-1, -1];
-    if (!arr && arr.length === 0) return targetLocation;
-    let foundIndex = _binarySearchTarget(arr, target);
-    if (foundIndex === -1) return targetLocation;
-    let maxIndex = foundIndex;
-    while (arr[maxIndex] === target) {  // when maxIndex goes out of bounds, arr[maxIndex] will be undefined
-        targetLocation[1] = maxIndex;   // so not necessary but can check for (maxIndex <= arr.length - 1)
-        maxIndex = maxIndex + 1;
-    }
-    let minIndex = foundIndex;
-    while (arr[minIndex] === target) {  // when minIndex goes out of bounds, arr[minIndex] will be undefined
-        targetLocation[0] = minIndex;   // so loop won't go forever but can check (minIndex >= 0)
-        minIndex = minIndex - 1;
-    }
-    return targetLocation;
-}
-
-// binary search helper function
-function _binarySearchTarget(arr, target) {
-    let startIndex = 0;
-    let endIndex = arr.length - 1;
-    while (startIndex <= endIndex) {
-        let middleIndex = Math.floor((startIndex + endIndex) / 2);
-        if (arr[middleIndex] === target) {
-            return middleIndex;
-        } else if (arr[middleIndex] > target) {
-            endIndex = middleIndex - 1;
-        } else {
-            startIndex = middleIndex + 1;
-        }
-    }
-    return -1;
-}
-
-let arrayOne = [2,4,5,5,5,5,5,7,9,9];
-let targetOne = 5;
-console.log(findFirstAndLastBinarySearch(arrayOne, targetOne));    // [ 2, 6 ]
-
-function findUsingBinaryOptimized(arr, target) {
+// Generally best time complexity (O(log(n))) with binary search, but on testing 'findFirstAndLast' turns out more efficient on very small arrays
+function findUsingBinarySearch(arr, target) {
     let targetLocation = [-1, -1];
     if (!arr && arr.length === 0) return targetLocation;
     let minIndex = _findBinaryMin(arr, target);
@@ -59,12 +20,12 @@ function _findBinaryMin(arr, target) {
     let endIndex = arr.length - 1;
     while (startIndex <= endIndex) {
         let middleIndex = Math.floor((startIndex + endIndex) / 2);
-        if (arr[middleIndex] === target && arr[middleIndex - 1] < target) { // Important, not only equal but is this smallest?
+        if (arr[middleIndex] === target && (middleIndex === 0 || arr[middleIndex - 1] < target)) {
             return middleIndex;
-        } else if (arr[middleIndex] >= target) { // Important, also check for equals
-            endIndex = middleIndex - 1;
-        } else {
+        } else if (arr[middleIndex] < target) {
             startIndex = middleIndex + 1;
+        } else {
+            endIndex = middleIndex - 1;
         }
     }
     return -1;
@@ -75,21 +36,23 @@ function _findBinaryMax(arr, target) {
     let endIndex = arr.length - 1;
     while (startIndex <= endIndex) {
         let middleIndex = Math.floor((startIndex + endIndex) / 2);
-        if (arr[middleIndex] === target && arr[middleIndex + 1] > target) { // Important, not only equal but is this largest?
+        if (arr[middleIndex] === target && (middleIndex === arr.length - 1 || arr[middleIndex + 1] > target)) {
             return middleIndex;
-        } else if (arr[middleIndex] > target) { // Important, equal case shouldn't go here since we need second half of arr
+        } else if (arr[middleIndex] > target) {
             endIndex = middleIndex - 1;
-        } else {                                // if arr[middle] is equal or less, we need to search for max in second half
+        } else {
             startIndex = middleIndex + 1;
         }
     }
     return -1;
 }
 
-console.log(findUsingBinaryOptimized(arrayOne, targetOne));    // [ 2, 6 ]
+let arrayOne = [2,4,5,5,5,5,5,7,9,9];
+let targetOne = 5;
+console.log(findUsingBinarySearch(arrayOne, targetOne));    // [ 2, 6 ]
 
-// Very good approach, time complexity O(n) space complexity O(1)
-// May or may not be as fast as binary search buy certainly be faster if elements are at beginning of array
+// Time complexity O(n) space complexity O(1)
+// May or may not be as fast as binary search but certainly faster if elements are at beginning of array
 function findFirstAndLast(arr, target) {
     let targetLocation = [-1, -1];
     if (!arr && arr.length === 0) return targetLocation;
