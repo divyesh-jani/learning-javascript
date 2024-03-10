@@ -1,7 +1,7 @@
 // Type coersion
 console.log(10 + '2');       // 102
 console.log('10' + '2');     // 102
-console.log('10' + '2');     // 102
+console.log('10' + 2);       // 102
 console.log(10 + 2);         // 12
 console.log(10 - '2');       // 8
 console.log('10' - '2');     // 8

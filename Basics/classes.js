@@ -80,6 +80,7 @@ class BankAccount {
         return 'All rights reserved!';
     }
 
+    // accountObj.createBabyAccount('Child', 500);
     createBabyAccount(babyName, amount) {
         return new BankAccount(this.customerName + '-' + babyName, amount);
     }
