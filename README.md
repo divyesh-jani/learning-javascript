@@ -145,6 +145,8 @@
     - [Kth Largest Element in Array](./Exercises/kth_largest_element.js)
     - [Buy Low Sell High](./Exercises/buy_low_sell_high.js)
     - [Is Valid BST](./Exercises/is_valid_bst.js)
+    - [Lowest Common Ancestor in BST](./Exercises/lowest_common_ancestor_bst.js)
+    - [Lowest Common Ancestor in Binary Tree](./Exercises/lowest_common_ancestor_bt.js)
     - [Binary Tree Symmetry](./Exercises/check_binary_tree_symmetry.js)
     - [Identical Trees](./Exercises/identical_trees.js)
     - [Are Binary Trees Isomorphic](./Exercises/are_binary_trees_isomorphic.js)
