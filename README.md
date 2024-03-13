@@ -115,6 +115,7 @@
     - [Roman Decimal Conversion](./Exercises/roman_decimal_conversion.js)
     - [Generate Paranthesis](./Exercises/generate_paranthesis.js)
     - [Is String Subset](./Exercises/check_subset.js)
+    - [Can Be Palindrome](./Exercises/can_be_palindrome.js)
     - [Climbing Staircase](./Exercises/climbing_staircase.js)
     - [Merge Intervals](./Exercises/merge_intervals.js)
     - [Merge Sorted Arrays](./Exercises/merge_sorted_arrays.js)
