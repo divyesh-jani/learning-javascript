@@ -136,6 +136,8 @@
     - [Contiguous Subarrays](./Exercises/contiguous_subarrays.js)
     - [Rotational Cipher](./Exercises/rotational_cipher.js)
     - [Pair Sums](./Exercises/pair_sums.js)
+    - [Detect Loop in Linked List](./Exercises/detect_loop_in_ll.js)
+    - [Linked List Intersection](./Exercises/do_ll_intersect.js)
     - [Count Palindromic Substrings](./Exercises/palindrome_substrings.js)
     - [Longest Palindromic Substring](./Exercises/longest_palindromic_substring.js)
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
