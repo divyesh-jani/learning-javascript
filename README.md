@@ -171,4 +171,7 @@
     - [Contiguous Subarray Averages](./Exercises/contiguous_subarray_averages.js)
     - [Custom Data Structure](./Exercises/custom_data_structure.js)
     - [Coin Change](./Exercises/coin_change.js)
-    
+    - [Grid Traveler](./Exercises/grid_traveler.js)
+    - [Can Sum](./Exercises/can_sum.js)
+    - [How Sum](./Exercises/how_sum.js)
+    - [Sentence Using Dictionary](./Exercises/sentence_from_dictionary.js)
