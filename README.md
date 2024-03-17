@@ -122,6 +122,7 @@
     - [Merge Sorted Arrays](./Exercises/merge_sorted_arrays.js)
     - [Merge Three Sorted Arrays](./Exercises/merge_three_sorted_arrays.js)
     - [Merge Sorted Linked Lists](./Exercises/merge_sorted_ll.js)
+    - [Merge Intersecting Linked Lists](./Exercises/merge_intersecting_ll.js)
     - [Median of Sorted Arrays](./Exercises/median_of_sorted_arrays.js)
     - [Remove Duplicates](./Exercises/remove_duplicates.js)
     - [Group Anagrams](./Exercises/group_anagrams.js)
