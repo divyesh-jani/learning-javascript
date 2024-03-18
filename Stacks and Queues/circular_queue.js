@@ -53,7 +53,7 @@ class CircularQueue {
             if (this.items[i]) {
                 queueOrder = queueOrder + this.items[i] + ' <- ';
             } else {
-                queueOrder = queueOrder + '_EMPTY_ <- ';
+                queueOrder = queueOrder + 'EMPTY <- ';
             }
         }
         queueOrder = queueOrder + 'END';
@@ -84,17 +84,16 @@ let mySmallQueue = new CircularQueue(3);
 mySmallQueue.enqueue('Adam');
 mySmallQueue.enqueue('Bob');
 mySmallQueue.enqueue('Chris');
-mySmallQueue.enqueue('Dan');             // Dan cannot be added since queue is full
-mySmallQueue.enqueue('Eliot');           // Eliot cannot be added since queue is full
-console.log(mySmallQueue.size);          // 3
-console.log(mySmallQueue.dequeue());     // Adam
-console.log(mySmallQueue.peek());        // Bob
-console.log(mySmallQueue.dequeue());     // Bob
+mySmallQueue.enqueue('Dan');            // Dan cannot be added since queue is full
+mySmallQueue.enqueue('Eliot');          // Eliot cannot be added since queue is full
+console.log(mySmallQueue.size);         // 3
+console.log(mySmallQueue.dequeue());    // Adam
+console.log(mySmallQueue.peek());       // Bob
+console.log(mySmallQueue.dequeue());    // Bob
 mySmallQueue.enqueue('Frank');
-console.log(mySmallQueue.vacantSpots)    // 1
-console.log(mySmallQueue.dequeue());     // Chris
-console.log(mySmallQueue.dequeue());     // Frank
-console.log(mySmallQueue.size);          // 0
+console.log(mySmallQueue.vacantSpots);  // 1
+console.log(mySmallQueue.dequeue());    // Chris
+console.log(mySmallQueue.dequeue());    // Frank
+console.log(mySmallQueue.size);         // 0
 mySmallQueue.enqueue('Gavin');
-mySmallQueue.printQueue();
-// START <- Gavin <- EMPTY <- EMPTY <- END
+mySmallQueue.printQueue();              // START <- Gavin <- EMPTY <- EMPTY <- END

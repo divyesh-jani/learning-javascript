@@ -46,5 +46,4 @@ console.log(myStack.pop());     // Frank
 console.log(myStack.pop());     // Chris
 console.log(myStack.size);      // 2
 myStack.push('Gavin');
-myStack.printStack();
-// Gavin, Bob, Adam
+myStack.printStack();           // Gavin, Bob, Adam

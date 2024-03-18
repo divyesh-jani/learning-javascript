@@ -25,7 +25,6 @@ function checkGrade(grade) {
 
 ['C','F','A','B','Z'].forEach(a => console.log(checkGrade(a)));
 
-
 function findType(x) {
     switch(typeof x) {
         case 'number':

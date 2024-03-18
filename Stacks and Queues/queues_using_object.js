@@ -62,5 +62,4 @@ console.log(myQueue.dequeue());     // Chris
 console.log(myQueue.dequeue());     // Dan
 console.log(myQueue.size);          // 2
 myQueue.enqueue('Gavin');
-myQueue.printQueue();
-// START <- Eliot <- Frank <- Gavin <- END
+myQueue.printQueue();               // START <- Eliot <- Frank <- Gavin <- END
