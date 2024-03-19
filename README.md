@@ -110,6 +110,7 @@
     - [Factorial](./Exercises/factorial.js)
     - [Fibonacci](./Exercises/fibonacci.js)
     - [Last Word Length](./Exercises/last_word_length.js)
+    - [Increment Number as Array](./Exercises/increment_num_as_array.js)
     - [Valid Paranthesis](./Exercises/valid_paranthesis.js)
     - [Robot Back to Origin](./Exercises/robot_returns_to_origin.js)
     - [Simplify Path](./Exercises/simplify_path.js)
