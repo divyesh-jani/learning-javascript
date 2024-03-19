@@ -4,15 +4,13 @@ function findSmallestMissing(arr) {
     let existsArr = Array(arr.length + 1).fill(false);
     existsArr[0] = true;
     for (let num of arr) {
-        if (num > 0) {
+        if (num > 0 && num <= arr.length) {
             existsArr[num] = true;
         }
     }
     let index = 1;
     while (index <= arr.length) {
-        if (existsArr[index] === false) {
-            return index;
-        }
+        if (existsArr[index] === false) return index;
         index = index + 1;
     }
     return index;
@@ -28,10 +26,10 @@ console.log(findSmallestMissing([]));                               // 1
 
 function findSmallestMissingEfficiently(arr) {
     for (let i = 0; i < arr.length; i = i + 1) {
-        while (arr[i] >= 1 && arr[i] <= arr.length && arr[i] !== arr[arr[i] - 1]) {
-            let temp = arr[arr[i] - 1];
-            arr[arr[i] - 1] = arr[i];
-            arr[i] = temp;
+        while (arr[i] > 0 && arr[i] <= arr.length && arr[i] !== arr[arr[i] - 1]) {
+            let source = i;
+            let destination = arr[i] - 1;
+            [arr[source], arr[destination]] = [arr[destination], arr[source]];
         }
     }
     for (let i = 0; i < arr.length; i = i + 1) {
