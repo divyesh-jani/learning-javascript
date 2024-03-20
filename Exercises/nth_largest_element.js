@@ -27,14 +27,10 @@ function getNthLargest(arr, highest) {
     let x = 0;
     let swapped = false;
     while (x < arr.length) {
-        if (x + 1 < arr.length) {
-            for (let y = x + 1; y < arr.length; y = y + 1) {
-                if (arr[x] < arr[y]) {
-                    let temp = arr[y];
-                    arr[y] = arr[x];
-                    arr[x] = temp;
-                    flag = true;
-                }
+        for (let y = x + 1; y < arr.length; y = y + 1) {
+            if (arr[x] < arr[y]) {
+                [arr[x], arr[y]] = [arr[y], arr[x]];
+                swapped = true;
             }
         }
         if (!swapped) {
