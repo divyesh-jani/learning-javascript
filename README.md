@@ -146,6 +146,7 @@
     - [Most Frequent K Elements](./Exercises/most_frequent_k_elements.js)
     - [Detect Loop in Linked List](./Exercises/detect_loop_in_ll.js)
     - [Linked List Intersection](./Exercises/do_ll_intersect.js)
+    - [Reorder Linked List](./Exercises/reorder_ll.js)
     - [Count Palindromic Substrings](./Exercises/palindrome_substrings.js)
     - [Longest Palindromic Substring](./Exercises/longest_palindromic_substring.js)
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
