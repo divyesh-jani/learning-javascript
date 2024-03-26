@@ -122,6 +122,8 @@
     - [Climbing Staircase](./Exercises/climbing_staircase.js)
     - [Smallest Missing Number](./Exercises/smallest_missing_number.js)
     - [Get N Missing Numbers](./Exercises/n_missing_numbers.js)
+    - [Non Overlapping Intervals](./Exercises/non_overlapping_intervals.js)
+    - [Insert Interval](./Exercises/insert_interval.js)
     - [Merge Intervals](./Exercises/merge_intervals.js)
     - [Merge Sorted Arrays](./Exercises/merge_sorted_arrays.js)
     - [Merge Three Sorted Arrays](./Exercises/merge_three_sorted_arrays.js)
