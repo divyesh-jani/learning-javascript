@@ -138,6 +138,7 @@
     - [Common Prefix](./Exercises/common_prefix.js)
     - [Maximize Vacation](./Exercises/maximize_vacation.js)
     - [Robot Path](./Exercises/robot_path.js)
+    - [Matrix Spiral](./Exercises/spiral_matrix.js)
     - [Tower of Hanoi](./Exercises/tower_of_hanoi.js)
     - [Flatten Nested Array](./Exercises/flatten_array.js)
     - [Longest Common Substring](./Exercises/longest_common_substring.js)
