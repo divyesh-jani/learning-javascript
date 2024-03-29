@@ -190,3 +190,5 @@
     - [How Sum](./Exercises/how_sum.js)
     - [Sentence Using Dictionary](./Exercises/sentence_from_dictionary.js)
     - [Number of Islands](./Exercises/number_of_islands.js)
+    - [LRU MRU Cache using Object and Linked List](./Exercises/lru_mru_cache_object_dll.js)
+    - [LRU MRU Cache using Map](./Exercises/lru_mru_cache_map.js)
