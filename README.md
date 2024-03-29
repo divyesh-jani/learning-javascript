@@ -89,6 +89,11 @@
         - Post-Order Traversal
     - [BFS: Breadth First Search](./Trees%20and%20Graphs/breadth_first_search.js)
         - Breadth First Traversal
+    - [Trie](./Trees%20and%20Graphs/trie.js)
+        - Add
+        - Search
+        - Suggest
+        - List All
     - [Graph Representation](./Trees%20and%20Graphs/graph_representation.js)
         - Adjacency Matrix
         - Adjacency List
