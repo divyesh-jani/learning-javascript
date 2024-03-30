@@ -61,10 +61,14 @@ let promiseZ = new Promise((resolve, reject) => {
 });
 
 async function useAsyncAwait() {
-    let response = await promiseZ;
-    console.log(response);
-    let finalResponse = await response.userId * 2;
-    console.log(finalResponse);
+    try {
+        let response = await promiseZ;
+        console.log(response);
+        let finalResponse = await response.userId * 2;
+        console.log(finalResponse);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 useAsyncAwait();
