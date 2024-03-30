@@ -95,6 +95,14 @@
         - Search
         - Suggest
         - List All
+    - [Min Heap](./Trees%20and%20Graphs/min_heap.js)
+        - Add
+        - Remove
+        - Peek
+    - [Max Heap](./Trees%20and%20Graphs/max_heap.js)
+        - Add
+        - Remove
+        - Peek
     - [Graph Representation](./Trees%20and%20Graphs/graph_representation.js)
         - Adjacency Matrix
         - Adjacency List
@@ -125,6 +133,7 @@
     - [Generate Paranthesis](./Exercises/generate_paranthesis.js)
     - [Is String Subset](./Exercises/check_subset.js)
     - [Can Be Palindrome](./Exercises/can_be_palindrome.js)
+    - [First Non Repeating Character](./Exercises/first_non_repeating_character.js)
     - [Climbing Staircase](./Exercises/climbing_staircase.js)
     - [Smallest Missing Number](./Exercises/smallest_missing_number.js)
     - [Get N Missing Numbers](./Exercises/n_missing_numbers.js)
@@ -147,6 +156,7 @@
     - [Maximize Vacation](./Exercises/maximize_vacation.js)
     - [Robot Path](./Exercises/robot_path.js)
     - [Matrix Spiral](./Exercises/spiral_matrix.js)
+    - [Rotate Matrix](./Exercises/rotate_matrix.js)
     - [Tower of Hanoi](./Exercises/tower_of_hanoi.js)
     - [Flatten Nested Array](./Exercises/flatten_array.js)
     - [Longest Common Substring](./Exercises/longest_common_substring.js)
@@ -158,6 +168,7 @@
     - [Detect Loop in Linked List](./Exercises/detect_loop_in_ll.js)
     - [Linked List Intersection](./Exercises/do_ll_intersect.js)
     - [Reorder Linked List](./Exercises/reorder_ll.js)
+    - [Add Numbers as Linked List](./Exercises/add_numbers_linked_list.js)
     - [Count Palindromic Substrings](./Exercises/palindrome_substrings.js)
     - [Longest Palindromic Substring](./Exercises/longest_palindromic_substring.js)
     - [Revenue Milestones](./Exercises/revenue_milestones.js)
