@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Divyesh Jani">
+    <meta name="description" content="Progress Bar">
+    <title>Progress Bar</title>
+    <style>
+        #outerBar {
+            border: 1px solid black;
+            height: 25px;
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        #innerBar {
+            background-color: aquamarine;
+            height: inherit;
+            width: 0px;
+        }
+    </style>
+</head>
+<body>
+    <section id="outerBar">
+        <section id="innerBar">
+
+        </section>
+    </section>
+
+    <button id="autoBtn">Auto Mode</button>
+    <button id="clearBtn">Clear</button>
+    <button id="incrementBtn">Incremental Progress</button>
+
+    <script>
+        let outerBar = document.getElementById('outerBar');
+        let progressBar = document.getElementById('innerBar');
+        let autoBtn = document.getElementById('autoBtn');
+        let incrementalBtn = document.getElementById('incrementBtn');
+        let clearBtn = document.getElementById('clearBtn');
+
+        autoBtn.addEventListener('click', function(e) {
+            let progressInterval = setInterval(function() {
+                let currentWidth = progressBar.offsetWidth;
+                let newWidth = currentWidth + 1;
+                progressBar.style.width = newWidth + 'px';
+                if (newWidth >= 400) {
+                    clearInterval(progressInterval);
+                }
+            }, 10);
+        });
+
+        incrementalBtn.addEventListener('click', function (e) {
+            let currentWidth = progressBar.offsetWidth;
+            if (currentWidth < 400) {
+                currentWidth = currentWidth + 40;
+            }
+            progressBar.style.width = currentWidth + 'px';
+        });
+
+        clearBtn.addEventListener('click', function(e) {
+            progressBar.style.width = 0 + 'px';
+        });
+
+        clearBtn.addEventListener('mouseover', function() {
+            this.title = 'Reset the progress bar to 0% progress.'
+        });
+
+    </script>
+</body>

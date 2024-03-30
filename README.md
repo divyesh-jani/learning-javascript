@@ -19,6 +19,7 @@
     - [Prototypal Inheritance](./Basics/prototypal_inheritance.js)
     - [Classes](./Basics/classes.js)
     - [Class Inheritance](./Basics/class_inheritance.js)
+    - [Promises](./Basics/promises.js)
     - Modules
 2. Recursion
     - [Factorial](./Recursion/factorial.js)
@@ -197,3 +198,5 @@
     - [Number of Islands](./Exercises/number_of_islands.js)
     - [LRU MRU Cache using Object and Linked List](./Exercises/lru_mru_cache_object_dll.js)
     - [LRU MRU Cache using Map](./Exercises/lru_mru_cache_map.js)
+9. Components
+    - [Progress Bar](./Components/progress_bar.html)
