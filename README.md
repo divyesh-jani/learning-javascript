@@ -208,6 +208,7 @@
     - [Can Sum](./Exercises/can_sum.js)
     - [How Sum](./Exercises/how_sum.js)
     - [Sentence Using Dictionary](./Exercises/sentence_from_dictionary.js)
+    - [Knapsack Problem](./Exercises/knapsack_problem.js)
     - [Number of Islands](./Exercises/number_of_islands.js)
     - [River Sizes](./Exercises/river_sizes.js)
     - [LRU MRU Cache using Object and Linked List](./Exercises/lru_mru_cache_object_dll.js)
