@@ -29,23 +29,22 @@ function getRiverSizesDFS(area) {
     return rivers;
 }
 
-const checkAdjacent = (x, y, input) => {
-    input[y][x] = 0;
-    let size = 1;
-    [[x + 1, y], [x, y + 1], [x - 1, y], [x, y - 1]].forEach(([i, j]) => {
-        if (input[j] && input[j][i]) {
-            size = size + checkAdjacent(i, j, input);
-        }
-    });
-    return size;
-};
-
-const getRiverSizesBFS = input => {
+function getRiverSizesBFS(input) {
     let results = [];
+    function bfsRiver(x, y) {
+        input[y][x] = 0;
+        let size = 1;
+        [[x + 1, y], [x, y + 1], [x - 1, y], [x, y - 1]].forEach(([i, j]) => {
+            if (input[j] && input[j][i]) {
+                size = size + bfsRiver(i, j);
+            }
+        });
+        return size;
+    };
     input.forEach((row, y) => {
         row.forEach((cell, x) => {
             if (input[y][x] === 1) {
-                results.push(checkAdjacent(x, y, input));
+                results.push(bfsRiver(x, y));
             }
         });
     });
