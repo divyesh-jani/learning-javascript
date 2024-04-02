@@ -1,5 +1,3 @@
-// Linked list is great if items need to be inserted/deleted from the middle of the list
-// Drawback is during access, will need to traverse to find element
 
 class Node {
     constructor(item) {
