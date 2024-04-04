@@ -22,7 +22,7 @@ function findMaxPlatforms(arrivalTimes, departureTimes) {
             temp = temp + 1;
         }
         if (trainsTogether > platformsNeeded) platformsNeeded = trainsTogether;
-        i = temp === i ? i + 1 : temp;
+        i = i + 1;
         j = j + 1;
     }
     return platformsNeeded;
@@ -39,3 +39,7 @@ console.log(findMaxPlatforms(arrival, departure));      // 1
 arrival = ['1:00', '2:00', '3:30', '5:00', '6:00'];
 departure = ['6:00', '6:00', '5:00', '6:00', '6:30'];
 console.log(findMaxPlatforms(arrival, departure));      // 3
+
+arrival = ['1:00', '2:00', '3:30', '5:00', '6:00', '7:00','7:10','7:20', '7:30'];
+departure = ['6:00', '6:00', '5:00', '6:00', '6:30', '8:00', '8:00', '8:00', '7:45'];
+console.log(findMaxPlatforms(arrival, departure));      // 4

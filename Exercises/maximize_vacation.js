@@ -5,32 +5,30 @@
 // since maximum 3 consecutive days off can be had by taking PTO on days[2]
 
 function maximizeVacation(days, pto) {
-    let maxCount = 0;
-    let i = 0;
-    while (i < days.length) {
-        let j = i;
+    let maxVacation = 0;
+    for (let i = 0; i < days.length; i = i + 1) {
         let timeAvailable = pto;
-        let count = 0;
-        let keepCounting = true;
-        while (j < days.length && keepCounting) {
+        let j = i;
+        let vacation = 0;
+        while (j < days.length) {
             if (days[j] === 'W') {
-                if (timeAvailable > 0) {
+                if (timeAvailable) {
+                    vacation = vacation + 1;
                     timeAvailable = timeAvailable - 1;
-                    count = count + 1;
                 } else {
-                    keepCounting = false;
+                    maxVacation = vacation > maxVacation ? vacation : maxVacation;
+                    break;
                 }
             } else {
-                count = count + 1;
+                vacation = vacation + 1;
             }
-            j = j + 1
+            j = j + 1;
         }
-        if (count > maxCount) maxCount = count;
-        i = i + 1;
     }
-    return maxCount;
+    return maxVacation;
 }
 
 console.log(maximizeVacation(['W', 'H', 'W', 'H', 'W', 'W', 'W'], 1));                  // 3
 console.log(maximizeVacation(['W', 'H', 'W', 'H', 'W', 'W', 'W'], 2));                  // 4
 console.log(maximizeVacation(['W', 'H', 'W', 'H', 'H', 'W', 'W', 'W', 'W', 'H'], 2));   // 5
+console.log(maximizeVacation(['W', 'H', 'W', 'H', 'W', 'W', 'W'], 0));                  // 1

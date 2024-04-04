@@ -1,24 +1,19 @@
 // Given an array, find the average of all contiguous subarrays of size k in it.
 
 function getAveragesOfSubarrays(inputArray, k) {
-    let startIndex = 0;
-    let endIndex = k - 1;
-    let sum = 0;
     let averagesList = [];
-    while (endIndex < inputArray.length) {
-        let start = startIndex;
-        if (start !== 0) {
-            sum = sum - inputArray[start - 1] + inputArray[endIndex];
-        } else {
-            while (start <= endIndex) {
-                sum = sum + inputArray[start];
-                start = start + 1;
-            }
+    let start = 0;
+    let sum = 0;
+    for (let i = 0; i < inputArray.length; i = i + 1) {
+        sum = sum + inputArray[i];
+        if (i >= k) {
+            sum = sum - inputArray[start];
+            start = start + 1;
         }
-        averagesList.push(sum / k);
-        startIndex = startIndex + 1;
-        endIndex = endIndex + 1;
-    };
+        if (i >= k - 1) {
+            averagesList.push(sum / k);
+        }
+    }
     return averagesList;
 }
 
@@ -29,24 +24,19 @@ console.log(getAveragesOfSubarrays(inputArray, 5));
 // A variation of the above exercise is asking for the maximum average in a subarray of length k
 
 function getMaxAveragesOfSubarrays(inputArray, k) {
-    let startIndex = 0;
-    let endIndex = k - 1;
-    let sum = 0;
     let maxAverage;
-    while (endIndex < inputArray.length) {
-        let start = startIndex;
-        if (start !== 0) {
-            sum = sum - inputArray[start - 1] + inputArray[endIndex];
-        } else {
-            while (start <= endIndex) {
-                sum = sum + inputArray[start];
-                start = start + 1;
-            }
+    let start = 0;
+    let sum = 0;
+    for (let i = 0; i < inputArray.length; i = i + 1) {
+        sum = sum + inputArray[i];
+        if (i >= k) {
+            sum = sum - inputArray[start];
+            start = start + 1;
         }
-        maxAverage = !maxAverage ? (sum / k) : Math.max(maxAverage, (sum / k));
-        startIndex = startIndex + 1;
-        endIndex = endIndex + 1;
-    };
+        if (i >= k - 1) {
+            maxAverage = !maxAverage || (sum / k) > maxAverage ? sum / k : maxAverage;
+        }
+    }
     return maxAverage;
 }
 

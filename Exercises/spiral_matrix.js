@@ -4,28 +4,28 @@ function printMatrixSpiral(matrix) {
     let result = [];
     let left = 0;
     let top = 0;
-    let right = matrix[0].length;
-    let bottom = matrix.length;
-    while (left < right && top < bottom) {
+    let right = matrix[0].length - 1;
+    let bottom = matrix.length - 1;
+    while (left <= right && top <= bottom) {
         let i = left;
-        while (i < right) {
+        while (i <= right) {
             result.push(matrix[top][i]);
             i = i + 1;
         }
         top = top + 1;
         i = top;
-        while (i < bottom) {
-            result.push(matrix[i][right - 1])
+        while (i <= bottom) {
+            result.push(matrix[i][right])
             i = i + 1;
         }
         right = right - 1;
-        i = right - 1;
+        i = right;
         while (i >= left) {
-            result.push(matrix[bottom - 1][i]);
+            result.push(matrix[bottom][i]);
             i = i - 1;
         }
         bottom = bottom - 1;
-        i = bottom - 1;
+        i = bottom;
         while (i >= top) {
             result.push(matrix[i][left]);
             i = i - 1;
