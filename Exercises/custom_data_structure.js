@@ -9,25 +9,29 @@
 
 class CustomDataStructure {
     constructor() {
-        this.peekArray = [];
-        this.table = {};
+        this.table = new Map();
     }
 
     add(key, value) {
-        this.table[key] = value;
-        this.peekArray.push(key);
+        this.table.delete(key);
+        this.table.set(key, value);
+
     }
 
     get(key) {
-        if (this.table[key]) {
-            this.peekArray.push(key);
-            return this.table[key];
+        if (this.table.has(key)) {
+            let value = this.table.get(key);
+            this.table.delete(key);
+            this.table.set(key, value);
+            return value;
+        } else {
+            console.log(key + ' does not exist.')
         }
     }
 
     delete(key) {
-        if (this.table[key]) {
-            delete this.table[key];
+        if (this.table.has(key)) {
+            this.table.delete(key);
         }
     }
 
@@ -36,36 +40,34 @@ class CustomDataStructure {
     }
 
     peek() {
-        for (let i = this.peekArray.length - 1; i >= 0; i = i - 1) {
-            let lastTouched = this.peekArray[i];
-            if (this.table[lastTouched]) {
-                return lastTouched;
-            } else {
-                this.peekArray.pop();
-            }
+        if (this.table.size > 0) {
+            return Array.from(this.table)[this.table.size - 1][0];
         }
+        return null;
     }
 }
 
 let myCustomDS = new CustomDataStructure();
 myCustomDS.add('a', 20);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // a
 myCustomDS.add('b', 40);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // b
+console.log(myCustomDS.get('b'));   // 40
 myCustomDS.add('c', 80);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // c
 myCustomDS.add('d', 160);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // d
 myCustomDS.add('b', 25);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // b
 myCustomDS.delete('c');
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // b
+console.log(myCustomDS.get('a'));   // 20
 myCustomDS.add('a', 15);
-console.log(myCustomDS.peek());
+console.log(myCustomDS.get('a'));   // 15
+console.log(myCustomDS.peek());     // a
 myCustomDS.delete('b');
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // a
 myCustomDS.delete('a');
-console.log(myCustomDS.peek());
+console.log(myCustomDS.peek());     // d
 myCustomDS.delete('d');
-console.log(myCustomDS.peek());
-// a b c d b b a a d undefined
+console.log(myCustomDS.peek());     // null
