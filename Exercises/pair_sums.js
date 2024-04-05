@@ -27,7 +27,7 @@ function numberOfWaysBruteForce(arr, sum) {
     return count;
 }
 
-
+// Testing
 let inputOne = [1, 2, 3, 4, 3];
 let total = 6;
 var expectedOne = 2;

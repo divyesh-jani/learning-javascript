@@ -22,7 +22,6 @@ console.log(isPowerOfTwo(128));     // true
 console.log(isPowerOfTwo(192));     // false
 console.log(isPowerOfTwo(1024));    // true
 
-
 // Alternate bitwise solution
 
 function isPowerOfTwoBitwise(n) {
