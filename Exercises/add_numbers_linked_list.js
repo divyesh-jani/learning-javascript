@@ -7,15 +7,9 @@ class ListNode {
     }
 }
 
-// Add numbers stored in default order (123 => 1 -> 2 -> 3)
-// List head points to most significant place (hundred's or thousands place)
-function addNumbersDefault(listA, listB) {
-    
-}
-
 // Add numbers stored in reverse order (123 => 1 <- 2 <- 3)
 // List head points to least significant place (unit's place)
-function addNumbersReverse(listA, listB) {
+function addNumbers(listA, listB) {
     if (!listA && !listB) return null;
     let carryOver = 0;
     let tempNode = new ListNode(null);
@@ -39,67 +33,30 @@ function addNumbersReverse(listA, listB) {
     return tempNode.next;
 }
 
-// 5 -> 6 -> 7
-let c = { value: 7, next: null };
+// 5 <- 6 <- 7
+let c = { value: 5, next: null };
 let b = { value: 6, next: c };
-let a = { value: 5, next: b };
+let a = { value: 7, next: b };
 
-// 8 -> 3 -> 9
-let z = { value: 9, next: null };
+// 8 <- 3 <- 9
+let z = { value: 8, next: null };
 let y = { value: 3, next: z };
-let x = { value: 8, next: y };
+let x = { value: 9, next: y };
 
-// 9 -> 6 -> 8 -> 9
+// 9 <- 6 <- 8 <- 9
 let s = { value: 9, next: null };
-let r = { value: 8, next: s };
-let q = { value: 6, next: r };
+let r = { value: 6, next: s };
+let q = { value: 8, next: r };
 let p = { value: 9, next: q };
 
 // 5
 let m = { value: 5, next: null };
 
-// 1 -> 2
-let o = { value: 2, next: null };
-let n = { value: 1, next: o };
-
-function printDefault(head) {
-    let num = '';
-    while (head) {
-        num = num + head.value;
-        head = head.next;
-    }
-    console.log(Number(num));
-}
-
-console.log('-----Add numbers in Order-----');
-printDefault(addNumbersDefault(a, x));      // 1406
-printDefault(addNumbersDefault(x, p));      // 10528
-printDefault(addNumbersDefault(a, a));      // 1134
-printDefault(addNumbersDefault(p, m));      // 9694
-printDefault(addNumbersDefault(n, p));      // 9701
-
-function reverseList(head) {
-    let current = head;
-    let temp = null;
-    while (current) {
-        let nextNode = current.next;
-        current.next = temp;
-        temp = current;
-        current = nextNode;
-    }
-    return temp;
-}
-
-// 5 <- 6 <- 7
-a = reverseList(a);
-// 8 <- 3 <- 9
-x = reverseList(x);
-// 9 <- 6 <- 8 <- 9
-p = reverseList(p);
 // 1 <- 2
-n = reverseList(n);
+let o = { value: 1, next: null };
+let n = { value: 2, next: o };
 
-function printReverse(head) {
+function printList(head) {
     let num = '';
     while (head) {
         num = head.value + num;
@@ -108,9 +65,8 @@ function printReverse(head) {
     console.log(Number(num));
 }
 
-console.log('-----Add numbers in Reverse Order-----');
-printReverse(addNumbersReverse(a, x));      // 1406
-printReverse(addNumbersReverse(x, p));      // 10528
-printReverse(addNumbersReverse(a, a));      // 1134
-printReverse(addNumbersReverse(p, m));      // 9694
-printReverse(addNumbersReverse(n, p));      // 9701
+printList(addNumbers(a, x));      // 1406
+printList(addNumbers(x, p));      // 10528
+printList(addNumbers(a, a));      // 1134
+printList(addNumbers(p, m));      // 9694
+printList(addNumbers(n, p));      // 9701
