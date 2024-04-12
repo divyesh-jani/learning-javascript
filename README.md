@@ -20,7 +20,7 @@
     - [Classes](./Basics/classes.js)
     - [Class Inheritance](./Basics/class_inheritance.js)
     - [Promises](./Basics/promises.js)
-    - Modules
+    - [Modules](./Basics/modules.mjs)
 2. Recursion
     - [Factorial](./Recursion/factorial.js)
     - [Exponents](./Recursion/exponents.js)
