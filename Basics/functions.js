@@ -1,3 +1,4 @@
+
 console.log(hoisted());     // Hoisted function.
 console.log(unhoisted());   // Undefined
 

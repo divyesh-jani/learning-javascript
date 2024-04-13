@@ -1,3 +1,4 @@
+
 function withdrawMoney(amount) {
     let balance = 1000;
     if (typeof(amount) !== 'number') {
