@@ -1,5 +1,6 @@
 // Iterating over string variables
 // All three will print the same output, converting string into array of characters
+
 let arr = 'test';
 console.log(arr.length);    // 4
 
