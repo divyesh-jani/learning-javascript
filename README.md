@@ -215,3 +215,4 @@
     - [LRU MRU Cache using Map](./Exercises/lru_mru_cache_map.js)
 9. Components
     - [Progress Bar](./Components/progress_bar.html)
+    - [Scroll Indicator](./Components/scroll_indicator.html)
