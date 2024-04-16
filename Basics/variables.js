@@ -1,3 +1,5 @@
+// var, let, and const
+
 console.log(test);      // undefined
 var test = 'test';
 console.log(test);      // test

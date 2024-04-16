@@ -45,7 +45,6 @@ let double = multiplier(2);
 console.log(double);                // returns anonymous function
 console.log(double(10));            // 20
 
-
 // Another example 
 let x = 5;
 function outer(y) {

@@ -24,7 +24,6 @@ let curriedSum = curry(sum);
 console.log(curriedSum(2)(3)(5));   // 10
 
 // Same as
-
 let addTwo = curriedSum(2);
 let addThree = addTwo(3);
 let addFive = addThree(5);

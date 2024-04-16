@@ -1,3 +1,4 @@
+
 function useWhile(input) {
     while (input <= 10) {
         console.log(input);
