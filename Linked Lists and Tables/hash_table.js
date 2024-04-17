@@ -67,6 +67,7 @@ class HashTable {
     }
 }
 
+// Testing
 let myHash = new HashTable(100);
 myHash.set('id', 50);
 myHash.set('name', 'Adam');

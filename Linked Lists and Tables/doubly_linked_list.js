@@ -184,6 +184,7 @@ class DoublyLinkedList {
     }
 }
 
+// Testing
 let myDLL = new DoublyLinkedList();
 console.log(myDLL.isEmpty());           // true
 myDLL.prepend('A');

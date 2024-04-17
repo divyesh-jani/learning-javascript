@@ -135,6 +135,7 @@ class LinkedList {
 
 }
 
+// Testing
 console.log('---Append and Prepend operations---');
 let myLinkedList = new LinkedList();
 myLinkedList.printList();                   // null
