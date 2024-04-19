@@ -58,7 +58,6 @@ console.log(arrayToSort);                   // [ 23, 5, 15, 42, 68, 50, 0, 50, 9
 console.log('Sorted array:');
 console.log(mergeSort(arrayToSort));        // [ 0, 5, 15, 23, 42, 50, 50, 64, 68, 95 ]
 
-
 let arrayToSortTwo = [ 23, -5, 15, 42, 20, 68, 50, 0, 42, 50, 95, 64, 100];
 console.log('Unsorted array:');
 console.log(arrayToSortTwo);                // [ 23, -5, 15, 42, 20, 68, 50, 0, 42, 50, 95, 64, 100 ]
