@@ -26,29 +26,6 @@ function sortAndMergeHalvedArrays(left, right) {
             j = j + 1;
         }
     }
-
-    // or the usual: check both arrays until one is exhausted
-    // and then add values from the other until that's exhausted
-
-    /*
-    while ((i < left.length) && (j < right.length)) {
-        if (left[i] < right[j]) {
-            mergedArray.push(left[i]);
-            i = i + 1;
-        } else {
-            mergedArray.push(right[j]);
-            j = j + 1;
-        }
-    }
-    while (i < left.length) {
-        mergedArray.push(left[i]);
-        i = i + 1;
-    }
-    while (j < right.length) {
-        mergedArray.push(right[j]);
-        j = j + 1;
-    }
-    */
     return mergedArray;
 }
 
