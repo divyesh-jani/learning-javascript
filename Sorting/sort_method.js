@@ -4,7 +4,6 @@
  * Numbers < Uppercase < Lowercase ; sortedListExample: [13, 2, Base, add]
  */
 
-
 console.log(['subtract', 'add', 'divide', 'multiply', 'exponent'].sort());
 // Result:  [ 'add', 'divide', 'exponent', 'multiply', 'subtract' ]
 
