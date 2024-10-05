@@ -129,6 +129,7 @@
     - [Binary Gap](./Exercises/binary_gap.js)
     - [Valid Paranthesis](./Exercises/valid_paranthesis.js)
     - [Robot Back to Origin](./Exercises/robot_returns_to_origin.js)
+    - [Robot Automation](./Exercises/robot_automation.js)
     - [Simplify Path](./Exercises/simplify_path.js)
     - [Roman Decimal Conversion](./Exercises/roman_decimal_conversion.js)
     - [Generate Paranthesis](./Exercises/generate_paranthesis.js)
