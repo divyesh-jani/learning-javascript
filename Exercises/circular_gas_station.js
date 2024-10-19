@@ -22,7 +22,6 @@ let gasStations = [1,2,3,4,5];
 let costAtStations = [3,4,5,1,2];
 console.log(gasStationPath(gasStations, costAtStations));   // 3
 
-
 let availableGas = [1, 5, 3, 3, 5, 3, 1, 3, 4, 5];
 let costToGoToNext = [5, 2, 2, 8, 2, 4, 2, 5, 1, 2];
 console.log(gasStationPath(availableGas, costToGoToNext));  // 8
