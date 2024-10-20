@@ -53,7 +53,7 @@ class BinarySearchTree {
         }
         return false;
     }
-    
+
     getMinValue(root = this.root) {
         if (!root) return null;
         while(root.left) {
