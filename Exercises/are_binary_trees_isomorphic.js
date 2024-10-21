@@ -23,7 +23,7 @@ class TreeNode {
         this.right = null;
     }
 }
- 
+
 /*
          1
         /  \
@@ -32,7 +32,6 @@ class TreeNode {
     4   5  6
        / \
       7   8
-
 */
 let root1 = new TreeNode(1);
 root1.left = new TreeNode(2);
