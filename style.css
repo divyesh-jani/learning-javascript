@@ -18,6 +18,14 @@ h4 {
     color: white;
 }
 
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 li {
     margin-bottom: 0.1rem;
 }
