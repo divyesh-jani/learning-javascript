@@ -2,16 +2,26 @@
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
-p#externalStyle {
-    color: forestgreen;
+h1, h2, h3, h5, h6 {
+    color: royalblue;
 }
 
-#selectorsTable {
-    border: 1px solid black;
+h4 {
+    color: midnightblue;
 }
 
-footer#common {
-    border-top: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.tabBtn {
+    color: royalblue;
+}
+
+.tabBtn.btn-primary {
+    color: white;
+}
+
+li {
+    margin-bottom: 0.1rem;
+}
+
+li>a {
+    text-decoration: none;
 }

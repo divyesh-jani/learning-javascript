@@ -1,212 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Divyesh Jani">
-    <meta name="description" content="This page explains JavaScript concepts and demonstrates the great things we can do with JavaScript.">
+    <meta name="description"
+        content="This page explains JavaScript concepts and demonstrates the great things we can do with JavaScript.">
     <link rel="icon" type="image/png" href="js-logo.png" />
     <title>Learning JavaScript</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        li {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-    </style>
 </head>
+
 <body>
-    <h1>
-        Learning JavaScript
-    </h1>
 
-    <h2>Basics</h2>
-    <ol>
-        <li><a href="Basics/variables.js">Variables</a></li>
-        <li><a href="Basics/type_coersion_coversion.js">Type Coersion and Conversion</a></li>
-        <li><a href="Basics/loops.js">Loops</a></li>
-        <li><a href="Basics/conditions.js">Conditional Statements</a></li>
-        <li><a href="Basics/functions.js">Functions</a></li>
-        <li><a href="Basics/arrays.js">Arrays</a></li>
-        <li><a href="Basics/objects.js">Objects</a></li>
-        <li><a href="Basics/this.js">This Keyword</a></li>
-        <li><a href="Basics/sets.js">Sets</a></li>
-        <li><a href="Basics/maps.js">Maps</a></li>
-        <li><a href="Basics/operations.js">Operations</a></li>
-        <li><a href="Basics/error.js">Error Handling</a></li>
-        <li><a href="Basics/closures.js">Closures</a></li>
-        <li><a href="Basics/currying.js">Currying</a></li>
-        <li><a href="Basics/prototype.js">Prototype</a></li>
-        <li><a href="Basics/prototypal_inheritance.js">Prototype Inheritance</a></li>
-        <li><a href="Basics/classes.js">Classes</a></li>
-        <li><a href="Basics/class_inheritance.js">Class Inheritance</a></li>
-        <li><a href="Basics/promises.js">Promises</a></li>
-        <li><a href="Basics/modules.mjs">Modules</a></li>
-    </ol>
+    <header class='px-4 my-4 text-center'>
+        <h1 class='display-6 fw-normal'>JavaScript</h1>
+        <div class='col-lg-6 mx-auto'>
+            <p class='lead mb-4 fw-normal'>Learn JavaScript and common algorithms and data structures in JavaScript.</p>
+        </div>
+    </header>
 
-    <h2>Recursion</h2>
-    <ol>
-        <li><a href="Recursion/factorial.js">Factorial</a></li>
-        <li><a href="Recursion/exponents.js">Exponents</a></li>
-        <li><a href="Recursion/fibonacci.js">Fibonacci</a></li>
-        <li><a href="Recursion/power_of_four.js">Power of Four</a></li>
-        <li><a href="Recursion/reverse_string.js">Reverse String</a></li>
-    </ol>
+    <nav class='px-4 my-4 text-center'>
+        <div class='d-grid gap-2 d-sm-flex justify-content-sm-center'>
+            <button type='button' class='tabBtn btn btn-primary fw-medium' id='btn1'>All</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn2'>Basics</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn3'>Recursion</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn4'>Searching</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn5'>Sorting</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn6'>Stacks &
+                Queues</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn7'>Linked Lists &
+                Tables</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn8'>Trees &
+                Graphs</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn9'>Exercises</button>
+            <button type='button' class='tabBtn btn btn-outline-secondary fw-medium' id='btn10'>Components</button>
+        </div>
+    </nav>
 
-    <h2>Searching</h2>
-    <ol>
-        <li><a href="Searching/linear_search.js">Linear Search</a></li>
-        <li><a href="Searching/binary_search.js">Binary Search</a></li>
-        <li><a href="Searching/binary_search_recursive.js">Binary Search Recursive</a></li>
-    </ol>
+    <div class='px-4 my-5'>
+        <h4>Basics</h4>
+        <ol>
+            <li><a href="Basics/variables.js">Variables</a></li>
+            <li><a href="Basics/type_coersion_coversion.js">Type Coersion and Conversion</a></li>
+            <li><a href="Basics/loops.js">Loops</a></li>
+            <li><a href="Basics/conditions.js">Conditional Statements</a></li>
+            <li><a href="Basics/functions.js">Functions</a></li>
+            <li><a href="Basics/arrays.js">Arrays</a></li>
+            <li><a href="Basics/objects.js">Objects</a></li>
+            <li><a href="Basics/this.js">This Keyword</a></li>
+            <li><a href="Basics/sets.js">Sets</a></li>
+            <li><a href="Basics/maps.js">Maps</a></li>
+            <li><a href="Basics/operations.js">Operations</a></li>
+            <li><a href="Basics/error.js">Error Handling</a></li>
+            <li><a href="Basics/closures.js">Closures</a></li>
+            <li><a href="Basics/currying.js">Currying</a></li>
+            <li><a href="Basics/prototype.js">Prototype</a></li>
+            <li><a href="Basics/prototypal_inheritance.js">Prototype Inheritance</a></li>
+            <li><a href="Basics/classes.js">Classes</a></li>
+            <li><a href="Basics/class_inheritance.js">Class Inheritance</a></li>
+            <li><a href="Basics/promises.js">Promises</a></li>
+            <li><a href="Basics/modules.mjs">Modules</a></li>
+        </ol>
 
-    <h2>Sorting</h2>
-    <ol>
-        <li><a href="Sorting/sort_method.js">Array Sort Method</a></li>
-        <li><a href="Sorting/selection_sort.js">Selection Sort</a></li>
-        <li><a href="Sorting/insertion_sort.js">Insertion Sort</a></li>
-        <li><a href="Sorting/bubble_sort.js">Bubble Sort</a></li>
-        <li><a href="Sorting/merge_sort.js">Merge Sort</a></li>
-        <li><a href="Sorting/quick_sort.js">Quick Sort</a></li>
-    </ol>
+        <h4>Recursion</h4>
+        <ol>
+            <li><a href="Recursion/factorial.js">Factorial</a></li>
+            <li><a href="Recursion/exponents.js">Exponents</a></li>
+            <li><a href="Recursion/fibonacci.js">Fibonacci</a></li>
+            <li><a href="Recursion/power_of_four.js">Power of Four</a></li>
+            <li><a href="Recursion/reverse_string.js">Reverse String</a></li>
+        </ol>
 
-    <h2>Stacks and Queues</h2>
-    <ol>
-        <li><a href="Stacks and Queues/stacks.js">Stacks</a></li>
-        <li><a href="Stacks and Queues/queues_using_array.js">Queues Using Array</a></li>
-        <li><a href="Stacks and Queues/queues_using_object.js">Queues Using Object</a></li>
-        <li><a href="Stacks and Queues/queue_using_stacks.js">Queues Using Two Stacks</a></li>
-        <li><a href="Stacks and Queues/circular_queue.js">Circular Queue</a></li>
-    </ol>
+        <h4>Searching</h4>
+        <ol>
+            <li><a href="Searching/linear_search.js">Linear Search</a></li>
+            <li><a href="Searching/binary_search.js">Binary Search</a></li>
+            <li><a href="Searching/binary_search_recursive.js">Binary Search Recursive</a></li>
+        </ol>
 
-    <h2>Linked Lists and Tables</h2>
-    <ol>
-        <li><a href="Linked Lists and Tables/linked_list.js">Linked List</a></li>
-        <li><a href="Linked Lists and Tables/doubly_linked_list.js">Doubly Linked List</a></li>
-        <li><a href="Linked Lists and Tables/hash_table.js">Hash Table</a></li>
-    </ol>
+        <h4>Sorting</h4>
+        <ol>
+            <li><a href="Sorting/sort_method.js">Array Sort Method</a></li>
+            <li><a href="Sorting/selection_sort.js">Selection Sort</a></li>
+            <li><a href="Sorting/insertion_sort.js">Insertion Sort</a></li>
+            <li><a href="Sorting/bubble_sort.js">Bubble Sort</a></li>
+            <li><a href="Sorting/merge_sort.js">Merge Sort</a></li>
+            <li><a href="Sorting/quick_sort.js">Quick Sort</a></li>
+        </ol>
 
-    <h2>Trees and Graphs</h2>
-    <ol>
-        <li><a href="Trees and Graphs/binary_search_tree.js">BST: Binary Search Tree</a></li>
-        <li><a href="Trees and Graphs/depth_first_search.js">DFS: Depth First Search</a></li>
-        <li><a href="Trees and Graphs/breadth_first_search.js">BFS: Breadth First Search</a></li>
-        <li><a href="Trees and Graphs/trie.js">Trie</a></li>
-        <li><a href="Trees and Graphs/min_heap.js">Min Heap</a></li>
-        <li><a href="Trees and Graphs/max_heap.js">Max Heap</a></li>
-        <li><a href="Trees and Graphs/graph_representation.js">Graph Representation</a></li>
-        <li><a href="Trees and Graphs/graph.js">Undirected Graph</a></li>
-    </ol>
+        <h4>Stacks and Queues</h4>
+        <ol>
+            <li><a href="Stacks and Queues/stacks.js">Stacks</a></li>
+            <li><a href="Stacks and Queues/queues_using_array.js">Queues Using Array</a></li>
+            <li><a href="Stacks and Queues/queues_using_object.js">Queues Using Object</a></li>
+            <li><a href="Stacks and Queues/queue_using_stacks.js">Queues Using Two Stacks</a></li>
+            <li><a href="Stacks and Queues/circular_queue.js">Circular Queue</a></li>
+        </ol>
 
-    <h2>Exercises</h2>
-    <ol>
-        <li><a href="Exercises/check_palindrome.js">Is Palindrome</a></li>
-        <li><a href="Exercises/check_prime.js">Is Prime</a></li>
-        <li><a href="Exercises/power_of_two.js">Is Power of Two</a></li>
-        <li><a href="Exercises/power_of_four.js">Is Power of Four</a></li>
-        <li><a href="Exercises/is_anagram.js">Is Anagram</a></li>
-        <li><a href="Exercises/is_monotonic.js">Is Array Monotonic</a></li>
-        <li><a href="Exercises/is_pangram.js">Is Pangram</a></li>
-        <li><a href="Exercises/factorial.js">Factorial</a></li>
-        <li><a href="Exercises/fibonacci.js">Fibonacci</a></li>
-        <li><a href="Exercises/valid_subsequence.js">Valid Subsequence</a></li>
-        <li><a href="Exercises/last_word_length.js">Last Word Length</a></li>
-        <li><a href="Exercises/increment_num_as_array.js">Increment Number as Array</a></li>
-        <li><a href="Exercises/binary_gap.js">Binary Gap</a></li>
-        <li><a href="Exercises/valid_paranthesis.js">Valid Paranthesis</a></li>
-        <li><a href="Exercises/robot_returns_to_origin.js">Robot Back to Origin</a></li>
-        <li><a href="Exercises/robot_automation.js">Robot Automation</a></li>
-        <li><a href="Exercises/simplify_path.js">Simplify Path</a></li>
-        <li><a href="Exercises/roman_decimal_conversion.js">Roman Decimal Conversion</a></li>
-        <li><a href="Exercises/generate_paranthesis.js">Generate Paranthesis</a></li>
-        <li><a href="Exercises/check_subset.js">Is String Subset</a></li>
-        <li><a href="Exercises/can_be_palindrome.js">Can Be Palindrome</a></li>
-        <li><a href="Exercises/first_non_repeating_character.js">First Non Repeating Character</a></li>
-        <li><a href="Exercises/climbing_staircase.js">Climbing Staircase</a></li>
-        <li><a href="Exercises/smallest_missing_number.js">Smallest Missing Number</a></li>
-        <li><a href="Exercises/n_missing_numbers.js">Get N Missing Numbers</a></li>
-        <li><a href="Exercises/non_overlapping_intervals.js">Non Overlapping Intervals</a></li>
-        <li><a href="Exercises/insert_interval.js">Insert Interval</a></li>
-        <li><a href="Exercises/merge_intervals.js">Merge Intervals</a></li>
-        <li><a href="Exercises/merge_sorted_arrays.js">Merge Sorted Arrays</a></li>
-        <li><a href="Exercises/merge_three_sorted_arrays.js">Merge Three Sorted Arrays</a></li>
-        <li><a href="Exercises/merge_sorted_ll.js">Merge Sorted Linked Lists</a></li>
-        <li><a href="Exercises/merge_intersecting_ll.js">Merge Intersecting Linked Lists</a></li>
-        <li><a href="Exercises/median_of_sorted_arrays.js">Median of Sorted Arrays</a></li>
-        <li><a href="Exercises/remove_duplicates.js">Remove Duplicates</a></li>
-        <li><a href="Exercises/group_anagrams.js">Group Anagrams</a></li>
-        <li><a href="Exercises/two_sum.js">Two Sum</a></li>
-        <li><a href="Exercises/four_sum.js">Four Sum</a></li>
-        <li><a href="Exercises/rotate_array.js">Rotate Array</a></li>
-        <li><a href="Exercises/rotate_linked_list.js">Rotate Linked List</a></li>
-        <li><a href="Exercises/array_elements_permutations.js">Permutations of Elements in Array</a></li>
-        <li><a href="Exercises/cartesian_product.js">Cartesian Product</a></li>
-        <li><a href="Exercises/common_prefix.js">Common Prefix</a></li>
-        <li><a href="Exercises/maximize_vacation.js">Maximize Vacation</a></li>
-        <li><a href="Exercises/robot_path.js">Robot Path</a></li>
-        <li><a href="Exercises/spiral_matrix.js">Matrix Spiral</a></li>
-        <li><a href="Exercises/rotate_matrix.js">Rotate Matrix</a></li>
-        <li><a href="Exercises/tower_of_hanoi.js">Tower of Hanoi</a></li>
-        <li><a href="Exercises/flatten_array.js">Flatten Nested Array</a></li>
-        <li><a href="Exercises/longest_common_substring.js">Longest Common Substring</a></li>
-        <li><a href="Exercises/contiguous_subarrays.js">Contiguous Subarrays</a></li>
-        <li><a href="Exercises/rotational_cipher.js">Rotational Cipher</a></li>
-        <li><a href="Exercises/pair_sums.js">Pair Sums</a></li>
-        <li><a href="Exercises/most_frequent_k_elements.js">Most Frequent K Elements</a></li>
-        <li><a href="Exercises/train_station_platforms.js">Train Platforms</a></li>
-        <li><a href="Exercises/detect_loop_in_ll.js">Detect Loop in Linked List</a></li>
-        <li><a href="Exercises/do_ll_intersect.js">Linked List Intersection</a></li>
-        <li><a href="Exercises/reorder_ll.js">Reorder Linked List</a></li>
-        <li><a href="Exercises/add_numbers_linked_list.js">Add Numbers as Linked List</a></li>
-        <li><a href="Exercises/palindrome_substrings.js">Count Palindromic Substrings</a></li>
-        <li><a href="Exercises/longest_palindromic_substring.js">Longest Palindromic Substring</a></li>
-        <li><a href="Exercises/revenue_milestones.js">Revenue Milestones</a></li>
-        <li><a href="Exercises/cafeteria_seats.js">Cafeteria Seats</a></li>
-        <li><a href="Exercises/can_plant_flower.js">Planting Flowers</a></li>
-        <li><a href="Exercises/rotary_lock.js">Rotary Locks</a></li>
-        <li><a href="Exercises/first_and_last_position.js">First and Last Position</a></li>
-        <li><a href="Exercises/sorted_rotated_array_search.js">Search in Sorted Rotated Array</a></li>
-        <li><a href="Exercises/kth_largest_element.js">Kth Largest Element in Array</a></li>
-        <li><a href="Exercises/nth_largest_element.js">Kth Largest Element without Sorting</a></li>
-        <li><a href="Exercises/buy_low_sell_high.js">Buy Low Sell High</a></li>
-        <li><a href="Exercises/is_valid_bst.js">Is Valid BST</a></li>
-        <li><a href="Exercises/lowest_common_ancestor_bst.js">Lowest Common Ancestor in BST</a></li>
-        <li><a href="Exercises/lowest_common_ancestor_bt.js">Lowest Common Ancestor in Binary Tree</a></li>
-        <li><a href="Exercises/check_binary_tree_symmetry.js">Binary Tree Symmetry</a></li>
-        <li><a href="Exercises/identical_trees.js">Identical Trees</a></li>
-        <li><a href="Exercises/are_binary_trees_isomorphic.js">Are Binary Trees Isomorphic</a></li>
-        <li><a href="Exercises/is_binary_tree_balanced.js">Is Binary Tree Balanced</a></li>
-        <li><a href="Exercises/balance_a_bst.js">Balance a Binary Search Tree</a></li>
-        <li><a href="Exercises/sorted_array_to_bst.js">Sorted Array to BST</a></li>
-        <li><a href="Exercises/sorted_ll_to_bst.js">Sorted Linked List to BST</a></li>
-        <li><a href="Exercises/bst_to_sorted_ll.js">BST to Sorted Linked List</a></li>
-        <li><a href="Exercises/bst_to_sorted_dll.js">BST to Sorted Doubly Linked List</a></li>
-        <li><a href="Exercises/bst_to_sorted_cll.js">BST to Circular Linked List</a></li>
-        <li><a href="Exercises/bt_to_ll.js">Binary Tree to Linked List</a></li>
-        <li><a href="Exercises/circular_gas_station.js">Circular Gas Station</a></li>
-        <li><a href="Exercises/can_finish_courses.js">Course Prerequisites</a></li>
-        <li><a href="Exercises/kth_permutation.js">Kth Permutation</a></li>
-        <li><a href="Exercises/shortest_substring.js">Shortest Substring</a></li>
-        <li><a href="Exercises/contiguous_subarray_averages.js">Contiguous Subarray Averages</a></li>
-        <li><a href="Exercises/trapping_rain_water.js">Trapping Rain Water</a></li>
-        <li><a href="Exercises/custom_data_structure.js">Custom Data Structure</a></li>
-        <li><a href="Exercises/coin_change.js">Coin Change</a></li>
-        <li><a href="Exercises/grid_traveler.js">Grid Traveler</a></li>
-        <li><a href="Exercises/can_sum.js">Can Sum</a></li>
-        <li><a href="Exercises/how_sum.js">How Sum</a></li>
-        <li><a href="Exercises/sentence_from_dictionary.js">Sentence Using Dictionary</a></li>
-        <li><a href="Exercises/knapsack_problem.js">Knapsack Problem</a></li>
-        <li><a href="Exercises/number_of_islands.js">Number of Islands</a></li>
-        <li><a href="Exercises/river_sizes.js">River Sizes</a></li>
-        <li><a href="Exercises/lru_mru_cache_object_dll.js">LRU MRU Cache using Object and Linked List</a></li>
-        <li><a href="Exercises/lru_mru_cache_map.js">LRU MRU Cache using Map</a></li>
-    </ol>
+        <h4>Linked Lists and Tables</h4>
+        <ol>
+            <li><a href="Linked Lists and Tables/linked_list.js">Linked List</a></li>
+            <li><a href="Linked Lists and Tables/doubly_linked_list.js">Doubly Linked List</a></li>
+            <li><a href="Linked Lists and Tables/hash_table.js">Hash Table</a></li>
+        </ol>
 
-    <h2>Components</h2>
-    <ol>
-        <li><a href="Components/progress_bar.html">Progress Bar</a></li>
-        <li><a href="Components/scroll_indicator.html">Scroll Indicator</a></li>
-    </ol>
+        <h4>Trees and Graphs</h4>
+        <ol>
+            <li><a href="Trees and Graphs/binary_search_tree.js">BST: Binary Search Tree</a></li>
+            <li><a href="Trees and Graphs/depth_first_search.js">DFS: Depth First Search</a></li>
+            <li><a href="Trees and Graphs/breadth_first_search.js">BFS: Breadth First Search</a></li>
+            <li><a href="Trees and Graphs/trie.js">Trie</a></li>
+            <li><a href="Trees and Graphs/min_heap.js">Min Heap</a></li>
+            <li><a href="Trees and Graphs/max_heap.js">Max Heap</a></li>
+            <li><a href="Trees and Graphs/graph_representation.js">Graph Representation</a></li>
+            <li><a href="Trees and Graphs/graph.js">Undirected Graph</a></li>
+        </ol>
 
+        <h4>Exercises</h4>
+        <ol>
+            <li><a href="Exercises/check_palindrome.js">Is Palindrome</a></li>
+            <li><a href="Exercises/check_prime.js">Is Prime</a></li>
+            <li><a href="Exercises/power_of_two.js">Is Power of Two</a></li>
+            <li><a href="Exercises/power_of_four.js">Is Power of Four</a></li>
+            <li><a href="Exercises/is_anagram.js">Is Anagram</a></li>
+            <li><a href="Exercises/is_monotonic.js">Is Array Monotonic</a></li>
+            <li><a href="Exercises/is_pangram.js">Is Pangram</a></li>
+            <li><a href="Exercises/factorial.js">Factorial</a></li>
+            <li><a href="Exercises/fibonacci.js">Fibonacci</a></li>
+            <li><a href="Exercises/valid_subsequence.js">Valid Subsequence</a></li>
+            <li><a href="Exercises/last_word_length.js">Last Word Length</a></li>
+            <li><a href="Exercises/increment_num_as_array.js">Increment Number as Array</a></li>
+            <li><a href="Exercises/binary_gap.js">Binary Gap</a></li>
+            <li><a href="Exercises/valid_paranthesis.js">Valid Paranthesis</a></li>
+            <li><a href="Exercises/robot_returns_to_origin.js">Robot Back to Origin</a></li>
+            <li><a href="Exercises/robot_automation.js">Robot Automation</a></li>
+            <li><a href="Exercises/simplify_path.js">Simplify Path</a></li>
+            <li><a href="Exercises/roman_decimal_conversion.js">Roman Decimal Conversion</a></li>
+            <li><a href="Exercises/generate_paranthesis.js">Generate Paranthesis</a></li>
+            <li><a href="Exercises/check_subset.js">Is String Subset</a></li>
+            <li><a href="Exercises/can_be_palindrome.js">Can Be Palindrome</a></li>
+            <li><a href="Exercises/first_non_repeating_character.js">First Non Repeating Character</a></li>
+            <li><a href="Exercises/climbing_staircase.js">Climbing Staircase</a></li>
+            <li><a href="Exercises/smallest_missing_number.js">Smallest Missing Number</a></li>
+            <li><a href="Exercises/n_missing_numbers.js">Get N Missing Numbers</a></li>
+            <li><a href="Exercises/non_overlapping_intervals.js">Non Overlapping Intervals</a></li>
+            <li><a href="Exercises/insert_interval.js">Insert Interval</a></li>
+            <li><a href="Exercises/merge_intervals.js">Merge Intervals</a></li>
+            <li><a href="Exercises/merge_sorted_arrays.js">Merge Sorted Arrays</a></li>
+            <li><a href="Exercises/merge_three_sorted_arrays.js">Merge Three Sorted Arrays</a></li>
+            <li><a href="Exercises/merge_sorted_ll.js">Merge Sorted Linked Lists</a></li>
+            <li><a href="Exercises/merge_intersecting_ll.js">Merge Intersecting Linked Lists</a></li>
+            <li><a href="Exercises/median_of_sorted_arrays.js">Median of Sorted Arrays</a></li>
+            <li><a href="Exercises/remove_duplicates.js">Remove Duplicates</a></li>
+            <li><a href="Exercises/group_anagrams.js">Group Anagrams</a></li>
+            <li><a href="Exercises/two_sum.js">Two Sum</a></li>
+            <li><a href="Exercises/four_sum.js">Four Sum</a></li>
+            <li><a href="Exercises/rotate_array.js">Rotate Array</a></li>
+            <li><a href="Exercises/rotate_linked_list.js">Rotate Linked List</a></li>
+            <li><a href="Exercises/array_elements_permutations.js">Permutations of Elements in Array</a></li>
+            <li><a href="Exercises/cartesian_product.js">Cartesian Product</a></li>
+            <li><a href="Exercises/common_prefix.js">Common Prefix</a></li>
+            <li><a href="Exercises/maximize_vacation.js">Maximize Vacation</a></li>
+            <li><a href="Exercises/robot_path.js">Robot Path</a></li>
+            <li><a href="Exercises/spiral_matrix.js">Matrix Spiral</a></li>
+            <li><a href="Exercises/rotate_matrix.js">Rotate Matrix</a></li>
+            <li><a href="Exercises/tower_of_hanoi.js">Tower of Hanoi</a></li>
+            <li><a href="Exercises/flatten_array.js">Flatten Nested Array</a></li>
+            <li><a href="Exercises/longest_common_substring.js">Longest Common Substring</a></li>
+            <li><a href="Exercises/contiguous_subarrays.js">Contiguous Subarrays</a></li>
+            <li><a href="Exercises/rotational_cipher.js">Rotational Cipher</a></li>
+            <li><a href="Exercises/pair_sums.js">Pair Sums</a></li>
+            <li><a href="Exercises/most_frequent_k_elements.js">Most Frequent K Elements</a></li>
+            <li><a href="Exercises/train_station_platforms.js">Train Platforms</a></li>
+            <li><a href="Exercises/detect_loop_in_ll.js">Detect Loop in Linked List</a></li>
+            <li><a href="Exercises/do_ll_intersect.js">Linked List Intersection</a></li>
+            <li><a href="Exercises/reorder_ll.js">Reorder Linked List</a></li>
+            <li><a href="Exercises/add_numbers_linked_list.js">Add Numbers as Linked List</a></li>
+            <li><a href="Exercises/palindrome_substrings.js">Count Palindromic Substrings</a></li>
+            <li><a href="Exercises/longest_palindromic_substring.js">Longest Palindromic Substring</a></li>
+            <li><a href="Exercises/revenue_milestones.js">Revenue Milestones</a></li>
+            <li><a href="Exercises/cafeteria_seats.js">Cafeteria Seats</a></li>
+            <li><a href="Exercises/can_plant_flower.js">Planting Flowers</a></li>
+            <li><a href="Exercises/rotary_lock.js">Rotary Locks</a></li>
+            <li><a href="Exercises/first_and_last_position.js">First and Last Position</a></li>
+            <li><a href="Exercises/sorted_rotated_array_search.js">Search in Sorted Rotated Array</a></li>
+            <li><a href="Exercises/kth_largest_element.js">Kth Largest Element in Array</a></li>
+            <li><a href="Exercises/nth_largest_element.js">Kth Largest Element without Sorting</a></li>
+            <li><a href="Exercises/buy_low_sell_high.js">Buy Low Sell High</a></li>
+            <li><a href="Exercises/is_valid_bst.js">Is Valid BST</a></li>
+            <li><a href="Exercises/lowest_common_ancestor_bst.js">Lowest Common Ancestor in BST</a></li>
+            <li><a href="Exercises/lowest_common_ancestor_bt.js">Lowest Common Ancestor in Binary Tree</a></li>
+            <li><a href="Exercises/check_binary_tree_symmetry.js">Binary Tree Symmetry</a></li>
+            <li><a href="Exercises/identical_trees.js">Identical Trees</a></li>
+            <li><a href="Exercises/are_binary_trees_isomorphic.js">Are Binary Trees Isomorphic</a></li>
+            <li><a href="Exercises/is_binary_tree_balanced.js">Is Binary Tree Balanced</a></li>
+            <li><a href="Exercises/balance_a_bst.js">Balance a Binary Search Tree</a></li>
+            <li><a href="Exercises/sorted_array_to_bst.js">Sorted Array to BST</a></li>
+            <li><a href="Exercises/sorted_ll_to_bst.js">Sorted Linked List to BST</a></li>
+            <li><a href="Exercises/bst_to_sorted_ll.js">BST to Sorted Linked List</a></li>
+            <li><a href="Exercises/bst_to_sorted_dll.js">BST to Sorted Doubly Linked List</a></li>
+            <li><a href="Exercises/bst_to_sorted_cll.js">BST to Circular Linked List</a></li>
+            <li><a href="Exercises/bt_to_ll.js">Binary Tree to Linked List</a></li>
+            <li><a href="Exercises/circular_gas_station.js">Circular Gas Station</a></li>
+            <li><a href="Exercises/can_finish_courses.js">Course Prerequisites</a></li>
+            <li><a href="Exercises/kth_permutation.js">Kth Permutation</a></li>
+            <li><a href="Exercises/shortest_substring.js">Shortest Substring</a></li>
+            <li><a href="Exercises/contiguous_subarray_averages.js">Contiguous Subarray Averages</a></li>
+            <li><a href="Exercises/trapping_rain_water.js">Trapping Rain Water</a></li>
+            <li><a href="Exercises/custom_data_structure.js">Custom Data Structure</a></li>
+            <li><a href="Exercises/coin_change.js">Coin Change</a></li>
+            <li><a href="Exercises/grid_traveler.js">Grid Traveler</a></li>
+            <li><a href="Exercises/can_sum.js">Can Sum</a></li>
+            <li><a href="Exercises/how_sum.js">How Sum</a></li>
+            <li><a href="Exercises/sentence_from_dictionary.js">Sentence Using Dictionary</a></li>
+            <li><a href="Exercises/knapsack_problem.js">Knapsack Problem</a></li>
+            <li><a href="Exercises/number_of_islands.js">Number of Islands</a></li>
+            <li><a href="Exercises/river_sizes.js">River Sizes</a></li>
+            <li><a href="Exercises/lru_mru_cache_object_dll.js">LRU MRU Cache using Object and Linked List</a></li>
+            <li><a href="Exercises/lru_mru_cache_map.js">LRU MRU Cache using Map</a></li>
+        </ol>
+
+        <h4>Components</h4>
+        <ol>
+            <li><a href="Components/progress_bar.html">Progress Bar</a></li>
+            <li><a href="Components/scroll_indicator.html">Scroll Indicator</a></li>
+        </ol>
+    </div>
+
+    <footer class='border-top'>
+        <div class='px-4 my-4 text-center'>
+            <div class='col-lg-12 mx-auto text-body-secondary'>
+                <p class='mb-4'>© 2021-2024 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz'
+        crossorigin='anonymous'></script>
 </body>
+
 </html>
