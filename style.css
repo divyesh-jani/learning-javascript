@@ -33,3 +33,20 @@ li {
 li>a {
     text-decoration: none;
 }
+
+.social {
+    width: 40px;
+}
+
+.social-lg {
+    width: 56px;
+}
+.social:hover, .social-lg:hover {
+    transition: transform .2s;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.custom-bs-tooltip {
+    --bs-tooltip-bg: #2e86c1;
+    --bs-tooltip-color: white;
+}
