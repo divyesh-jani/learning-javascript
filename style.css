@@ -2,12 +2,29 @@
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
-h1, h2, h3, h5, h6 {
+body,
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h4, h5, h6 {
     color: royalblue;
 }
 
-h4 {
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
     color: midnightblue;
+    font-size: 1.5rem;
+}
+
+.topics {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    background-color: mintcream; /* or azure */
 }
 
 .tabBtn {
